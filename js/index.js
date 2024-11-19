@@ -109,14 +109,12 @@ const services = {
   },
 };
 
-
 // Get the service ID from the URL (e.g., ?service=pellet-stove-repair)
 const urlParams = new URLSearchParams(window.location.search);
 const serviceId = urlParams.get("service");
 
 // Check if the service exists, then update the content
 if (services[serviceId]) {
- 
   document.getElementById("service-title").innerText =
     services[serviceId].title;
   document.getElementById("title").innerText = services[serviceId].title;
@@ -124,15 +122,28 @@ if (services[serviceId]) {
 
   // document.querySelectorAll("title").innerText = services[serviceId].title;
 
-
   document.getElementById("main-content").innerHTML =
     services[serviceId].description;
 } else {
-  document.getElementById("service-title").innerText = "Local Chimney Sweep and Cleaning Service";
+  document.getElementById("service-title").innerText =
+    "Local Chimney Sweep and Cleaning Service";
   document.getElementById("main-content").innerHTML = `
             <p>Our local chimney sweep services ensure your chimney is clean and free from dangerous buildup, keeping your home safe.</p>
 
     `;
 }
 
+//WARIS CODE
 
+const serve = document.querySelector(".service-buttons-containerss");
+const serviceHide = document.querySelector(".serviceHide");
+console.log(serve);
+function HideNaveBar() {
+  if (serve.classList.contains("hide")) {
+    serve.classList.remove("hide");
+  } else {
+    serve.classList.add("hide");
+  }
+}
+
+serviceHide.addEventListener("click", HideNaveBar);
