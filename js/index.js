@@ -119,14 +119,19 @@ if (services[serviceId]) {
     services[serviceId].title;
   document.getElementById("title").innerText = services[serviceId].title;
   document.getElementById("dynamic-with").innerText = services[serviceId].title;
+  document.querySelectorAll(".dynamic").forEach((item) => {
+    return (item.innerText = services[serviceId].title);
+  });
 
   // document.querySelectorAll("title").innerText = services[serviceId].title;
 
   document.getElementById("main-content").innerHTML =
     services[serviceId].description;
 } else {
-  document.getElementById("service-title").innerText = "Local Chimney Sweep and Cleaning Service";
-  document.getElementById("dynamic-with").innerText ="Local Chimney Sweep and Cleaning Service";
+  document.getElementById("service-title").innerText =
+    "Local Chimney Sweep and Cleaning Service";
+  document.getElementById("dynamic-with").innerText =
+    "Local Chimney Sweep and Cleaning Service";
 
   document.getElementById("main-content").innerHTML = `
             <p>Our local chimney sweep services ensure your chimney is clean and free from dangerous buildup, keeping your home safe.</p>
@@ -137,14 +142,13 @@ if (services[serviceId]) {
 //WARIS CODE
 
 // carousel
-const track = document.querySelector('.carousel-track');
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
+const track = document.querySelector(".carousel-track");
+const prevButton = document.getElementById("prevButton");
+const nextButton = document.getElementById("nextButton");
 
 // Total number of items
-const totalItems = document.querySelectorAll('.carousel-item').length;
+const totalItems = document.querySelectorAll(".carousel-item").length;
 
-// Current index of the carousel
 let currentIndex = 0;
 
 // Function to update the carousel position
@@ -154,7 +158,7 @@ function updateCarousel() {
 }
 
 // Event listener for Previous button
-prevButton.addEventListener('click', () => {
+prevButton.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;
     updateCarousel();
@@ -162,7 +166,7 @@ prevButton.addEventListener('click', () => {
 });
 
 // Event listener for Next button
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener("click", () => {
   if (currentIndex < totalItems - 1) {
     currentIndex++;
     updateCarousel();
@@ -173,7 +177,6 @@ nextButton.addEventListener('click', () => {
 updateCarousel();
 const serve = document.querySelector(".service-buttons-containerss");
 const serviceHide = document.querySelector(".serviceHide");
-console.log(serve);
 function HideNaveBar() {
   if (serve.classList.contains("hide")) {
     serve.classList.remove("hide");
@@ -186,7 +189,7 @@ serviceHide.addEventListener("click", HideNaveBar);
 
 const hamburger = document.querySelector(".hamburger");
 const list = document.querySelector(".list");
-console.log(list);
+
 function SibeBar() {
   if (list.classList.contains("hides")) {
     list.classList.remove("hides");
@@ -196,3 +199,24 @@ function SibeBar() {
 }
 
 hamburger.addEventListener("click", SibeBar);
+
+const accordion = document.querySelectorAll(".question");
+const hidden = document.querySelectorAll(".answer");
+
+function Array() {
+  accordion.forEach((item, indexs) => {
+    item.addEventListener("click", () => {
+      if (item) {
+        hidden.forEach((item, index) => {
+          if (index === indexs && item.classList.contains("hidden")) {
+            item.classList.remove("hidden");
+          } else {
+            item.classList.add("hidden");
+          }
+        });
+      }
+    });
+  });
+}
+
+Array();

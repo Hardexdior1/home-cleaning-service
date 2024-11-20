@@ -1,6 +1,5 @@
 /* General styling */
 
-
 .contact-us-section {
   padding: 20px;
   max-width: 1200px;
@@ -53,10 +52,8 @@
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
 }
-
-
-
 
 .form-container form {
   display: flex;
@@ -106,17 +103,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -136,9 +122,9 @@ hr {
   color: #555;
 }
 
-@media (max-width:768px) {
-.call-back-section,.call-back-section1{
-      flex-wrap: wrap;
-
-}
+@media (max-width: 768px) {
+  .call-back-section,
+  .call-back-section1 {
+    flex-wrap: wrap;
+  }
 }
