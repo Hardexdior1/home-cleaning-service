@@ -157,6 +157,34 @@
   font-weight: 600;
 }
 
+.callss {
+  display: flex;
+  background-color: red;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 30px;
+  width: 300px;
+  text-align: center;
+  display: none;
+  margin: auto;
+  /* gap: 5px; */
+}
+.callss .phone0-icons i {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.callss .phone-contents span {
+  font-size: 16px;
+  font-family: 700;
+  text-transform: uppercase;
+}
+.callss.sepes {
+  font-weight: 600;
+}
+
 .trust-container {
   margin-top: 30px;
 }
@@ -212,40 +240,97 @@
   display: none;
 }
 
-@media (max-width: 1023px) {
-  .icon div h4 {
-    font-size: 19px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 350px;
+@media (max-width: 768px) {
+  .hides {
+    display: none;
   }
-
+  .hamburger {
+    display: block;
+    margin-left: 50px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+  .hamburger i {
+    font-size: 30px;
+  }
   .list {
     margin-left: 0px;
     margin-right: 0px;
     position: absolute;
-    top: 202px;
+    top: 90px;
+    left: 0;
+    max-width: 100%;
+  }
+  .navbar {
+    padding: 0px 0px 0px 20px;
+    max-width: 100%;
+  }
+
+  .list ul {
+    width: 320px;
+    padding: 50px 40px;
+    background-color: white;
+    max-width: 100%;
   }
   .list ul li {
     float: none;
-    padding-left: 20px;
-    background-color: red;
+    padding-left: 0px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgb(20, 20, 23);
+  }
+
+  .list ul li:nth-child(2) {
+    border-bottom: none;
+  }
+  .list ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    color: rgb(27, 27, 33);
   }
   .call {
-    display: flex;
-    background-color: red;
-    padding: 10px 50px;
-    color: white;
-    border-radius: 30px;
-    /* gap: 5px; */
-    position: absolute;
-    top: 192px;
+    display: none;
   }
-  .hamburger {
+  .icon div h4 {
+    font-size: 18px;
+    font-weight: 600;
+    width: auto;
+  }
+  .service-buttons-containerss {
+    grid-template-columns: 1fr 1fr;
+    width: 340px;
+    top: 230px;
+    left: 10px;
+    padding: 20px 20px;
+    max-width: 100%;
+    margin: 10px;
+  }
+  .service-buttons-containerss a {
+    text-decoration: none;
+    margin-top: 15px;
+  }
+  .service-buttons-containerss a {
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .callss {
     display: block;
   }
-  .navbar {
-    position: none;
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px 5px 20px 15px;
+    justify-content: center;
+  }
+
+  .box {
+    margin-top: 20px;
+    width: 90%;
+    max-width: 100%;
+    padding-right: 10px;
   }
 }

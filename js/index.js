@@ -147,3 +147,16 @@ function HideNaveBar() {
 }
 
 serviceHide.addEventListener("click", HideNaveBar);
+
+const hamburger = document.querySelector(".hamburger");
+const list = document.querySelector(".list");
+console.log(list);
+function SibeBar() {
+  if (list.classList.contains("hides")) {
+    list.classList.remove("hides");
+  } else {
+    list.classList.add("hides");
+  }
+}
+
+hamburger.addEventListener("click", SibeBar);
