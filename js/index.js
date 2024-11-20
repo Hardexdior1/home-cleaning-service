@@ -129,6 +129,8 @@ if (services[serviceId]) {
     services[serviceId].description;
 } else {
   document.getElementById("service-title").innerText = "Local Chimney Sweep and Cleaning Service";
+  document.getElementById("dynamic-with").innerText ="Local Chimney Sweep and Cleaning Service";
+
   document.getElementById("main-content").innerHTML = `
             <p>Our local chimney sweep services ensure your chimney is clean and free from dangerous buildup, keeping your home safe.</p>
 
@@ -136,3 +138,38 @@ if (services[serviceId]) {
 }
 
 
+// carousel
+const track = document.querySelector('.carousel-track');
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+
+// Total number of items
+const totalItems = document.querySelectorAll('.carousel-item').length;
+
+// Current index of the carousel
+let currentIndex = 0;
+
+// Function to update the carousel position
+function updateCarousel() {
+  const offset = currentIndex * 100;
+  track.style.transform = `translateX(-${offset}%)`;
+}
+
+// Event listener for Previous button
+prevButton.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+// Event listener for Next button
+nextButton.addEventListener('click', () => {
+  if (currentIndex < totalItems - 1) {
+    currentIndex++;
+    updateCarousel();
+  }
+});
+
+// Initialize the carousel
+updateCarousel();

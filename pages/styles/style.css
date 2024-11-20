@@ -12,24 +12,35 @@ body {
     background-image: url('../../images/hero.webp'); /* Replace with your background */
     background-size: cover;
     background-position: center;
-    padding: 30px 0px;
+    padding:30px 0px;
   }
   
   .hero-content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     max-width: 1200px;
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* padding: 10px 0px; */
     gap: 20px;
   }
   
   .hero-left {
-    flex: 1 1 50%;
+    /* flex: 1 1 50%; */
+    /* background-color: transparent; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
+
+
   }
-  
+  .hero-right {
+    /* flex: 1 1 40%; */
+    padding: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
+
+  }
   .hero-title {
     color: #e67e22;
     font-size: 2rem;
@@ -47,7 +58,24 @@ body {
     padding: 0;
     color: #555;
     font-size: 1rem;
+    display: grid;
+    gap: 10px;
     line-height: 1.6;
+  }
+  .features-list li{
+    padding: 2%;
+    box-shadow: 1px 2px 3px rgb(173, 172, 172) ;
+    border-radius: 5px;
+    background-color: white;
+  }
+  @media (min-width: 768px) {
+    .features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    }
+    
+  
   }
   
   .features-list li::before {
@@ -56,16 +84,9 @@ body {
     margin-right: 10px;
   }
   
-  .hero-right {
-    flex: 1 1 40%;
-  }
+ 
   
-  .form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+  /*  */
   
   .form-container h3 {
     font-size: 1.2rem;
@@ -81,7 +102,6 @@ body {
   
   .contact-form input,
   .contact-form textarea {
-    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -107,11 +127,17 @@ body {
     .hero-content {
       flex-direction: column;
     }
-  
-    .hero-left,
+    .hero-content{
+      flex-wrap: wrap;
+      display: flex;
+      padding: 0px 4%;
+    }
+        /* padding: 10px 0px; */
+
+    /* .hero-left,
     .hero-right {
       flex: 1 1 100%;
-    }
+    } */
   }
   
 
@@ -119,6 +145,10 @@ body {
   .padding{
     padding: 5% 10%;
   }
+  .padding h1{
+    margin-bottom: 40px;
+  }
+  
   .dynamicWrap{
     background-color: #f4f4f9;
     padding: 5% 10%;
