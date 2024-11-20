@@ -109,21 +109,18 @@ const services = {
   },
 };
 
-
 // Get the service ID from the URL (e.g., ?service=pellet-stove-repair)
 const urlParams = new URLSearchParams(window.location.search);
 const serviceId = urlParams.get("service");
 
 // Check if the service exists, then update the content
 if (services[serviceId]) {
- 
   document.getElementById("service-title").innerText =
     services[serviceId].title;
   document.getElementById("title").innerText = services[serviceId].title;
   document.getElementById("dynamic-with").innerText = services[serviceId].title;
 
   // document.querySelectorAll("title").innerText = services[serviceId].title;
-
 
   document.getElementById("main-content").innerHTML =
     services[serviceId].description;
@@ -137,6 +134,7 @@ if (services[serviceId]) {
     `;
 }
 
+//WARIS CODE
 
 // carousel
 const track = document.querySelector('.carousel-track');
@@ -173,3 +171,28 @@ nextButton.addEventListener('click', () => {
 
 // Initialize the carousel
 updateCarousel();
+const serve = document.querySelector(".service-buttons-containerss");
+const serviceHide = document.querySelector(".serviceHide");
+console.log(serve);
+function HideNaveBar() {
+  if (serve.classList.contains("hide")) {
+    serve.classList.remove("hide");
+  } else {
+    serve.classList.add("hide");
+  }
+}
+
+serviceHide.addEventListener("click", HideNaveBar);
+
+const hamburger = document.querySelector(".hamburger");
+const list = document.querySelector(".list");
+console.log(list);
+function SibeBar() {
+  if (list.classList.contains("hides")) {
+    list.classList.remove("hides");
+  } else {
+    list.classList.add("hides");
+  }
+}
+
+hamburger.addEventListener("click", SibeBar);
