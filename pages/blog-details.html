@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Details</title> <!-- Default title will be replaced -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .blog-details {
+      max-width: 800px;
+      margin: auto;
+    }
+    .blog-title {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .blog-content {
+      margin-top: 20px;
+      color: #333;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007BFF;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .back-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-details">
+    <div id="blog-title" class="blog-title"></div>
+    <div id="blog-content" class="blog-content"></div>
+    <a href="/pages/blogs.html" class="back-btn">Back to Blogs</a>
+  </div>
+
+  <script>
+    // Retrieve the selected blog from localStorage
+    const blog = JSON.parse(localStorage.getItem("selectedBlog"));
+
+    // Check if blog data exists
+    if (blog) {
+      // Populate the blog details
+      document.getElementById("blog-title").innerText = blog.title;
+      document.getElementById("blog-content").innerText = blog.content;
+
+      // Set the page title dynamically
+      document.title = blog.title;
+    } else {
+      document.getElementById("blog-title").innerText = "Blog not found!";
+      document.getElementById("blog-content").innerText = "Sorry, the blog you are looking for does not exist.";
+    }
+  </script>
+</body>
+</html>

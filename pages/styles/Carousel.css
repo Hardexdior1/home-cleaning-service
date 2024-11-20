@@ -76,7 +76,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     border: none;
-    background-color: #f5a623;
+    background-color: #d35400;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -84,7 +84,7 @@
   }
   
   .carousel-button:hover {
-    background-color: #e5931f;
+    background-color: #d35400;
   }
   
   /* Responsive styling */

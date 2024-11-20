@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .blog-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .blog-card:hover {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .blog-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .blog-excerpt {
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Blog Page</h1>
+  <div id="blog-list">
+    <!-- Blog cards will be dynamically added here -->
+  </div>
+
+  <script>
+    // Simulated blog data
+    const blogs = [
+      { id: 1, title: "First Blog", excerpt: "This is the first blog.", content: "Full content of the first blog." },
+      { id: 2, title: "Second Blog", excerpt: "This is the second blog.", content: "Full content of the second blog." },
+      { id: 3, title: "Third Blog", excerpt: "This is the third blog.", content: "Full content of the third blog." }
+    ];
+
+    const blogList = document.getElementById("blog-list");
+
+    // Dynamically render blog cards
+    blogs.forEach(blog => {
+      const blogCard = document.createElement("div");
+      blogCard.className = "blog-card";
+      blogCard.innerHTML = `
+        <div class="blog-title">${blog.title}</div>
+        <div class="blog-excerpt">${blog.excerpt}</div>
+      `;
+      blogCard.onclick = () => {
+        // Store blog details in localStorage
+        localStorage.setItem("selectedBlog", JSON.stringify(blog));
+        // Redirect to blog details page
+        window.location.href = "blog-details.html";
+      };
+      blogList.appendChild(blogCard);
+    });
+  </script>
+</body>
+</html>
