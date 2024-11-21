@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
-        max-width: 1370px;
+  max-width: 1370px;
 }
 
 .hero-section {
@@ -101,7 +101,8 @@ body {
   border-radius: 4px;
 }
 
-.contact-form button,.btn {
+.contact-form button,
+.btn {
   background-color: #e67e22;
   color: #fff;
   padding: 10px;
@@ -189,4 +190,24 @@ p {
 }
 #service {
   background-color: white;
+}
+
+/* Hero close to service section */
+
+#hero {
+  padding-top: 50px;
+}
+
+/* trusttrust-container-under */
+.trust-container h2 {
+  margin-bottom: 50px;
+}
+
+#service-title {
+  text-align: left;
+  font-size: 30px;
+}
+#service-titles {
+  text-align: left;
+  font-size: 30px;
 }
