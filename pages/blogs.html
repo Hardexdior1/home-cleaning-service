@@ -1,68 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .blog-card {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 20px;
-      margin: 10px;
-      transition: box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    .blog-card:hover {
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    .blog-title {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .blog-excerpt {
-      color: #555;
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Blog Page</h1>
-  <div id="blog-list">
-    <!-- Blog cards will be dynamically added here -->
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
 
-  <script>
-    // Simulated blog data
-    const blogs = [
-      { id: 1, title: "First Blog", excerpt: "This is the first blog.", content: "Full content of the first blog." },
-      { id: 2, title: "Second Blog", excerpt: "This is the second blog.", content: "Full content of the second blog." },
-      { id: 3, title: "Third Blog", excerpt: "This is the third blog.", content: "Full content of the third blog." }
-    ];
 
-    const blogList = document.getElementById("blog-list");
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 1370px;
+      }
 
-    // Dynamically render blog cards
-    blogs.forEach(blog => {
-      const blogCard = document.createElement("div");
-      blogCard.className = "blog-card";
-      blogCard.innerHTML = `
-        <div class="blog-title">${blog.title}</div>
-        <div class="blog-excerpt">${blog.excerpt}</div>
-      `;
-      blogCard.onclick = () => {
-        // Store blog details in localStorage
-        localStorage.setItem("selectedBlog", JSON.stringify(blog));
-        // Redirect to blog details page
-        window.location.href = "blog-details.html";
-      };
-      blogList.appendChild(blogCard);
-    });
-  </script>
-</body>
+      .bl {
+        color: #e67e22;
+      }
+
+      #blog-list {
+        display: flex;
+        flex-wrap: wrap; /* Ensures the cards wrap on smaller screens */
+        gap: 40px;
+        justify-content: center; /* Centers the cards */
+      }
+
+      .blog-card {
+        display: flex;
+        flex-direction: row; /* Ensures the image and text are side by side */
+        align-items: flex-start;
+        gap: 15px;
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+        width: 100%; /* Full width for smaller screens */
+        box-shadow: 0px 3px 5px rgba(27, 27, 27, 0.2);
+        transition: box-shadow 0.3s ease;
+      }
+
+      .blog-card:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .blog-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+
+      .blog-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .blog-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .blog-excerpt {
+        color: #555;
+      }
+
+      .btn {
+        background: #e67e22;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background 0.3s;
+      }
+
+      .btn:hover {
+        background: #cf620d;
+      }
+
+      @media (max-width: 768px) {
+        .blog-card {
+          flex-direction: column; /* Stack image and text vertically on smaller screens */
+          align-items: center;
+        }
+
+        .blog-image {
+          width: 100%; /* Adjust image size for smaller screens */
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i>
+  
+          <div><h4>Lemon Grove Chimney Sweep</h4></div>
+        </div>
+  
+        <div class="list hides">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="serviceHide">
+              <a href="#"
+                >Service <i class="fa fa-angle-down" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li><a href="#">Contact us </a></li>
+            <li><a href="./pages/blogs.html">Blog</a></li>
+          </ul>
+          <div class="callss">
+            <div class="phone0-icons">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </div>
+            <div class="phone-contents">
+              <span>Click to Call:</span>
+              <span class="sepes"> 0934895658</span>
+            </div>
+          </div>
+        </div>
+        <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="call">
+          <div class="phone0-icon">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </div>
+          <div class="phone-content">
+            <span>Click to Call:</span>
+            <span class="sepe"> 0934895658</span>
+          </div>
+        </div>
+        <!-- 
+        <div class="services hide"></div> -->
+        <section class="service-buttons-containerss hide">
+          <a href="index.html?service=pellet-stove-repair">
+            <button class="service-buttons">Pellet Stove Repair Service</button>
+          </a>
+  
+          <a href="index.html?service=chimney-cap-installation">
+            <button class="service-buttons">Chimney Cap Installation</button>
+          </a>
+  
+          <a href="index.html?service=chimney-fireplace-repair">
+            <button class="service-buttons">Chimney Fireplace Repair</button>
+          </a>
+  
+          <a href="index.html?service=chimney-flashing-repair">
+            <button class="service-buttons">Chimney Flashing Repair</button>
+          </a>
+  
+          <a href="index.html?service=chimney-inspection">
+            <button class="service-buttons">Chimney Inspection</button>
+          </a>
+  
+          <a href="index.html?service=chimney-liner">
+            <button class="service-buttons">Chimney Liner</button>
+          </a>
+  
+          <a href="index.html?service=chimney-masonry-repair">
+            <button class="service-buttons">Chimney Masonry Repair</button>
+          </a>
+  
+          <a href="index.html?service=chimney-rebuilds">
+            <button class="service-buttons">Chimney Rebuilds</button>
+          </a>
+  
+          <a href="index.html?service=chimney-repair">
+            <button class="service-buttons">Chimney Repair</button>
+          </a>
+  
+          <a href="index.html?service=commercial-air-duct-cleaning">
+            <button class="service-buttons">Commercial Air Duct Cleaning</button>
+          </a>
+  
+          <a href="index.html?service=dryer-duct-cleaning">
+            <button class="service-buttons">Dryer Duct Cleaning</button>
+          </a>
+  
+          <a href="index.html?service=duct-cleaning">
+            <button class="service-buttons">Duct Cleaning</button>
+          </a>
+  
+          <a href="index.html?service=firebox-repair">
+            <button class="service-buttons">Firebox Repair</button>
+          </a>
+  
+          <a href="index.html?service=fireplace-cleaning">
+            <button class="service-buttons">Fireplace Cleaning</button>
+          </a>
+  
+          <a href="index.html?service=gas-fireplace-cleaning">
+            <button class="service-buttons">Gas Fireplace Cleaning</button>
+          </a>
+  
+          <a href="index.html?service=gas-fireplace-repair">
+            <button class="service-buttons">Gas Fireplace Repair</button>
+          </a>
+  
+          <a href="index.html?service=local-chimney-sweep-and-cleaning">
+            <button class="service-buttons">
+              Local Chimney Sweep And Cleaning
+            </button>
+          </a>
+  
+          <a href="index.html?service=pellet-stove-repair">
+            <button class="service-buttons">Pellet Stove Repair</button>
+          </a>
+        </section>
+      </div>
+
+
+    <!-- normal blog page -->
+    <div class="padding">
+      <center class="bl"><h1>Blog</h1></center>
+      <div id="blog-list">
+        <!-- Blog cards will be dynamically added here -->
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <div class="footer">
+        <div class="footer-one">
+          <div class="company-name">
+            <a href="/">Lemon Grove Chimney Sweep</a>
+          </div>
+          <div class="para"><p>Five Star Company</p></div>
+          <div class="stars">
+            <img src="/images/star-set.webp" alt="star-image" />
+          </div>
+          <div class="p-element">
+            <p>
+              Looking for the best chimney sweep services in Lemon Grove? Look no
+              further! Our network of local chimney sweep experts is ready to
+              solve any chimney-related issue you might face. Trust us to connect
+              you with Lemon Grove's finest, highly qualified professionals,
+              ensuring your chimney care is in the best hands.
+            </p>
+          </div>
+        </div>
+  
+        <div class="footer-two">
+          <div class="footer-two-head">
+            <h3>We Accept All Major credit Cards!</h3>
+          </div>
+          <div class="footer-two-image">
+            <img src="/images/bank-cards.webp" alt="card-image" />
+          </div>
+  
+          <div class="follow"><h3>Follow us</h3></div>
+          <div class="social-media">
+            <img src="/images/insta.webp" alt="instagram" />
+            <img src="/images/twitter.webp" alt="twitter" />
+            <img src="/images/face.webp" alt="face-book" />
+          </div>
+        </div>
+        <div class="footer-three">
+          <div class="quick">
+            <h3>Quick Links</h3>
+            <div class="a-links">
+              <ul>
+                <li><a href="/"> Home</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="service">
+            <h3>Services</h3>
+            <div class="a-links">
+              <ul>
+                <li><a href=""> Chimney Repair</a></li>
+                <li><a href="">Fireplace Cleaning</a></li>
+                <li><a href="">Gas Fireplace Cleaning</a></li>
+                <li><a href="">Chimney Fireplace Repair</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- javascript -->
+    <script>
+      // Simulated blog data
+      const blogs = [
+        {
+          id: 1,
+          title: "The Science Behind Chimney Sweeping",
+          content: `
+    <p>Recognizing the Signs</p>
+<p>Like every essential part of your home, chimneys signal when they need attention. Paying attention to these signs can make a significant difference:</p>
+<p>Soot Accumulation: If you notice piles of black soot or even chunks of creosote at the base of your fireplace, it's a clear sign your chimney needs cleaning.</p>
+<p>Persistent Smoky Odor: A strong smoky smell in your house, even when the fireplace isn’t in use, can indicate a buildup of creosote or other blockages.</p>
+<p>Difficulty with Fires: Struggling to light a fire or having it frequently go out can mean airflow issues, usually due to chimney blockages.</p>
+<p>The Annual Chimney Check</p>
+<p>Preventive measures are always better than reactive solutions, especially with something as vital as a chimney:</p>
+<p>Yearly Routine: Experts universally recommend a chimney inspection and sweep at least once a year, preferably before winter sets in. This ensures it’s clean, safe, and ready for the heavy-duty burn season.</p>
+<p>Spotting Potential Issues: Regular checks allow professionals to identify minor problems before they escalate. This proactive approach can save you costly repairs and potential hazards down the line.</p>
+<p>Preparation for Winter: A clean chimney ensures maximum heating efficiency from your fireplace, a must-have for those chilly winter nights.</p>
+<p>Benefits Beyond Cleaning</p>
+<p>Hiring a professional chimney sweep in Lemon Grove, California, offers advantages that go beyond the immediate cleaning:</p>
+<p>Expert Guidance: A professional can provide invaluable advice on efficient fireplace usage, ensuring you get the best burn with minimal residue.</p>
+<p>Wood Selection Tips: Different woods have varying burn efficiencies and creosote outputs. A chimney sweep can guide you in making the best choices for your fireplace.</p>
+<p>Maintenance Reminders: Regular sweeps often come with the added perk of reminders. Professionals can notify you when it’s time for your next check, ensuring you never miss out.</p>
+<p>Your chimney is more than a brick tunnel for smoke; it’s an essential part of your home’s safety and comfort system. Regular checks and cleanings ensure you enjoy cozy homes without any looming threats. Trust our seasoned experts to provide top-notch service that prioritizes your home’s safety and efficiency.</p>
+
+`,
+          date: "January 10, 2023",
+          image: "../images/hero.webp", // Add your image URL here
+        },
+        {
+          id: 2,
+          title: "Why Every Home Needs A Chimney Sweep",
+          content: `
+   <p>The Importance of Regular Chimney Cleaning In Lemon Grove, California</p>
+<p>Your chimney might look fine from the outside, but inside, things can get messy. Over time, soot, ash, and other waste build up inside the chimney. This not only affects the efficiency of your fireplace but can also be a fire hazard. That’s where a chimney sweep comes in. Here’s why getting your chimney cleaned by a professional is so important:</p>
+<p>Safety First: A dirty chimney can catch fire. The built-up soot can easily ignite, causing damage to your home or even risking your family’s safety.</p>
+<p>Breathe Fresh Air: A clean chimney means cleaner air in your home. Without all that soot and waste, your fireplace works better and doesn’t release harmful smoke indoors.</p>
+<p>Save Money: Regular cleaning helps your fireplace work efficiently. This means less firewood and lower energy bills.</p>
+<p>Why Choose Our Chimney Sweep Service?</p>
+<p>There are plenty of chimney cleaners out there, but our service stands out. Here’s why you should pick us:</p>
+<p>Experienced Team: Our chimney sweeps are trained and have years of experience. They know what to look for and how to clean it properly.</p>
+<p>Affordable Prices: We offer great service without breaking the bank.</p>
+<p>Quick and Clean: We do our job fast and leave no mess behind.</p>
+<p>The Benefits of a Clean Chimney</p>
+<p>Once your chimney is clean, you’ll notice the difference. Here’s what a clean chimney brings to your home:</p>
+<p>Warm and Cozy: Your fireplace will give out more heat, keeping your home warm and cozy.</p>
+<p>Peace of Mind: There is no need to worry about chimney fires or harmful smoke.</p>
+<p>Longer Chimney Life: Regular cleaning means your chimney will last longer and need fewer repairs.</p>
+
+`,
+          date: "March 8, 2023",
+          image: "../images/hero.webp",
+        },
+        {
+          id: 3,
+          title: "When To Call A Chimney Sweep",
+          date: "April 27, 2023",
+          content: `
+    <p>Recognizing the Signs</p>
+<p>Like every essential part of your home, chimneys signal when they need attention. Paying attention to these signs can make a significant difference:</p>
+<p>Soot Accumulation: If you notice piles of black soot or even chunks of creosote at the base of your fireplace, it's a clear sign your chimney needs cleaning.</p>
+<p>Persistent Smoky Odor: A strong smoky smell in your house, even when the fireplace isn’t in use, can indicate a buildup of creosote or other blockages.</p>
+<p>Difficulty with Fires: Struggling to light a fire or having it frequently go out can mean airflow issues, usually due to chimney blockages.</p>
+<p>The Annual Chimney Check</p>
+<p>Preventive measures are always better than reactive solutions, especially with something as vital as a chimney:</p>
+<p>Yearly Routine: Experts universally recommend a chimney inspection and sweep at least once a year, preferably before winter sets in. This ensures it’s clean, safe, and ready for the heavy-duty burn season.</p>
+<p>Spotting Potential Issues: Regular checks allow professionals to identify minor problems before they escalate. This proactive approach can save you costly repairs and potential hazards down the line.</p>
+<p>Preparation for Winter: A clean chimney ensures maximum heating efficiency from your fireplace, a must-have for those chilly winter nights.</p>
+<p>Benefits Beyond Cleaning</p>
+<p>Hiring a professional chimney sweep in Lemon Grove, California, offers advantages that go beyond the immediate cleaning:</p>
+<p>Expert Guidance: A professional can provide invaluable advice on efficient fireplace usage, ensuring you get the best burn with minimal residue.</p>
+<p>Wood Selection Tips: Different woods have varying burn efficiencies and creosote outputs. A chimney sweep can guide you in making the best choices for your fireplace.</p>
+<p>Maintenance Reminders: Regular sweeps often come with the added perk of reminders. Professionals can notify you when it’s time for your next check, ensuring you never miss out.</p>
+<p>Your chimney is more than a brick tunnel for smoke; it’s an essential part of your home’s safety and comfort system. Regular checks and cleanings ensure you enjoy cozy homes without any looming threats. Trust our seasoned experts to provide top-notch service that prioritizes your home’s safety and efficiency.</p>
+
+`,
+          image: "../images/hero.webp",
+        },
+      ];
+
+      const blogList = document.getElementById("blog-list");
+
+      // Dynamically render blog cards
+      blogs.forEach((blog) => {
+        const blogCard = document.createElement("div");
+        blogCard.className = "blog-card";
+
+        // Add image to the card
+        const blogImage = document.createElement("img");
+        blogImage.src = blog.image;
+        blogImage.alt = blog.title;
+        blogImage.className = "blog-image";
+
+        // Create a div to hold the text content
+        const blogContent = document.createElement("div");
+        blogContent.className = "blog-content";
+        blogContent.innerHTML = `
+          <div class="blog-title">${blog.title}</div>
+          <div class="blog-excerpt">${blog.date}</div>
+        `;
+
+        // Add the "Read Blog" button
+        const button = document.createElement("button");
+        button.className = "btn";
+        button.innerHTML = "Read Blog";
+        button.onclick = () => {
+          // Store blog details in localStorage
+          localStorage.setItem("selectedBlog", JSON.stringify(blog));
+          // Redirect to blog details page
+          window.location.href = "blog-details.html";
+        };
+
+        // Append elements to the card
+        blogContent.appendChild(button);
+        blogCard.appendChild(blogImage);
+        blogCard.appendChild(blogContent);
+        blogList.appendChild(blogCard);
+      });
+    </script>
+  </body>
 </html>

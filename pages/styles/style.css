@@ -2,6 +2,8 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+        max-width: 1370px;
 }
 
 .hero-section {
@@ -99,7 +101,7 @@ body {
   border-radius: 4px;
 }
 
-.contact-form button {
+.contact-form button,.btn {
   background-color: #e67e22;
   color: #fff;
   padding: 10px;
