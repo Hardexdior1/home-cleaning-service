@@ -1,64 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Details</title> <!-- Default title will be replaced -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    .blog-details {
-      max-width: 800px;
-      margin: auto;
-    }
-    .blog-title {
-      font-size: 30px;
-      font-weight: bold;
-    }
-    .blog-content {
-      margin-top: 20px;
-      color: #333;
-    }
-    .back-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #007BFF;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    .back-btn:hover {
-      background: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <div class="blog-details">
-    <div id="blog-title" class="blog-title"></div>
-    <div id="blog-content" class="blog-content"></div>
-    <a href="/pages/blogs.html" class="back-btn">Back to Blogs</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+
+    <title>Blog Details</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+      }
+      .blog-details {
+        max-width: 800px;
+        margin: auto;
+      }
+      .blog-title {
+        font-weight: bold;
+        color: #83879d;
+        margin-bottom: 0;
+      }
+      .blog-date {
+        margin: 5px 0;
+        color: #555;
+        font-size: 14px;
+      }
+      .blog-image {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 5px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .blog-content {
+        margin-top: 20px;
+        color: #333;
+      }
+      .back-btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .back-btn:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <div class="navbar">
+      <div class="icon">
+        <i class="fas fa-map-marker-alt"></i>
+
+        <div><h4>Lemon Grove Chimney Sweep</h4></div>
+      </div>
+
+      <div class="list hides">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li class="serviceHide">
+            <a href="#"
+              >Service <i class="fa fa-angle-down" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li><a href="#">Contact us </a></li>
+          <li><a href="./pages/blogs.html">Blog</a></li>
+        </ul>
+        <div class="callss">
+          <div class="phone0-icons">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </div>
+          <div class="phone-contents">
+            <span>Click to Call:</span>
+            <span class="sepes"> 0934895658</span>
+          </div>
+        </div>
+      </div>
+      <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+      <div class="call">
+        <div class="phone0-icon">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
+        <div class="phone-content">
+          <span>Click to Call:</span>
+          <span class="sepe"> 0934895658</span>
+        </div>
+      </div>
+      <!-- 
+      <div class="services hide"></div> -->
+      <section class="service-buttons-containerss hide">
+        <a href="index.html?service=pellet-stove-repair">
+          <button class="service-buttons">Pellet Stove Repair Service</button>
+        </a>
+
+        <a href="index.html?service=chimney-cap-installation">
+          <button class="service-buttons">Chimney Cap Installation</button>
+        </a>
+
+        <a href="index.html?service=chimney-fireplace-repair">
+          <button class="service-buttons">Chimney Fireplace Repair</button>
+        </a>
+
+        <a href="index.html?service=chimney-flashing-repair">
+          <button class="service-buttons">Chimney Flashing Repair</button>
+        </a>
+
+        <a href="index.html?service=chimney-inspection">
+          <button class="service-buttons">Chimney Inspection</button>
+        </a>
+
+        <a href="index.html?service=chimney-liner">
+          <button class="service-buttons">Chimney Liner</button>
+        </a>
+
+        <a href="index.html?service=chimney-masonry-repair">
+          <button class="service-buttons">Chimney Masonry Repair</button>
+        </a>
+
+        <a href="index.html?service=chimney-rebuilds">
+          <button class="service-buttons">Chimney Rebuilds</button>
+        </a>
+
+        <a href="index.html?service=chimney-repair">
+          <button class="service-buttons">Chimney Repair</button>
+        </a>
+
+        <a href="index.html?service=commercial-air-duct-cleaning">
+          <button class="service-buttons">Commercial Air Duct Cleaning</button>
+        </a>
+
+        <a href="index.html?service=dryer-duct-cleaning">
+          <button class="service-buttons">Dryer Duct Cleaning</button>
+        </a>
+
+        <a href="index.html?service=duct-cleaning">
+          <button class="service-buttons">Duct Cleaning</button>
+        </a>
+
+        <a href="index.html?service=firebox-repair">
+          <button class="service-buttons">Firebox Repair</button>
+        </a>
+
+        <a href="index.html?service=fireplace-cleaning">
+          <button class="service-buttons">Fireplace Cleaning</button>
+        </a>
+
+        <a href="index.html?service=gas-fireplace-cleaning">
+          <button class="service-buttons">Gas Fireplace Cleaning</button>
+        </a>
+
+        <a href="index.html?service=gas-fireplace-repair">
+          <button class="service-buttons">Gas Fireplace Repair</button>
+        </a>
+
+        <a href="index.html?service=local-chimney-sweep-and-cleaning">
+          <button class="service-buttons">
+            Local Chimney Sweep And Cleaning
+          </button>
+        </a>
+
+        <a href="index.html?service=pellet-stove-repair">
+          <button class="service-buttons">Pellet Stove Repair</button>
+        </a>
+      </section>
+    </div>
+
+
+    <!-- blog details -->
+    <div class="blog-details">
+      <center>
+        <h1 id="blog-title" class="blog-title"></h1>
+        <p id="date" class="blog-date"></p>
+      </center>
+      <img id="blog-image" class="blog-image" alt="Blog Image" />
+      <p id="blog-content" class="blog-content"></p>
+    </div>
+
+<!-- footer section -->
+<div class="footer">
+  <div class="footer-one">
+    <div class="company-name">
+      <a href="/">Lemon Grove Chimney Sweep</a>
+    </div>
+    <div class="para"><p>Five Star Company</p></div>
+    <div class="stars">
+      <img src="/images/star-set.webp" alt="star-image" />
+    </div>
+    <div class="p-element">
+      <p>
+        Looking for the best chimney sweep services in Lemon Grove? Look no
+        further! Our network of local chimney sweep experts is ready to
+        solve any chimney-related issue you might face. Trust us to connect
+        you with Lemon Grove's finest, highly qualified professionals,
+        ensuring your chimney care is in the best hands.
+      </p>
+    </div>
   </div>
 
-  <script>
-    // Retrieve the selected blog from localStorage
-    const blog = JSON.parse(localStorage.getItem("selectedBlog"));
+  <div class="footer-two">
+    <div class="footer-two-head">
+      <h3>We Accept All Major credit Cards!</h3>
+    </div>
+    <div class="footer-two-image">
+      <img src="/images/bank-cards.webp" alt="card-image" />
+    </div>
 
-    // Check if blog data exists
-    if (blog) {
-      // Populate the blog details
-      document.getElementById("blog-title").innerText = blog.title;
-      document.getElementById("blog-content").innerText = blog.content;
+    <div class="follow"><h3>Follow us</h3></div>
+    <div class="social-media">
+      <img src="/images/insta.webp" alt="instagram" />
+      <img src="/images/twitter.webp" alt="twitter" />
+      <img src="/images/face.webp" alt="face-book" />
+    </div>
+  </div>
+  <div class="footer-three">
+    <div class="quick">
+      <h3>Quick Links</h3>
+      <div class="a-links">
+        <ul>
+          <li><a href="/"> Home</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
 
-      // Set the page title dynamically
-      document.title = blog.title;
-    } else {
-      document.getElementById("blog-title").innerText = "Blog not found!";
-      document.getElementById("blog-content").innerText = "Sorry, the blog you are looking for does not exist.";
-    }
-  </script>
-</body>
+    <div class="service">
+      <h3>Services</h3>
+      <div class="a-links">
+        <ul>
+          <li><a href=""> Chimney Repair</a></li>
+          <li><a href="">Fireplace Cleaning</a></li>
+          <li><a href="">Gas Fireplace Cleaning</a></li>
+          <li><a href="">Chimney Fireplace Repair</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- javascript -->
+    <script>
+      // Retrieve the selected blog from localStorage
+      const blog = JSON.parse(localStorage.getItem("selectedBlog"));
+
+      // Check if blog data exists
+      if (blog) {
+        // Populate the blog details
+        document.getElementById("blog-title").innerText = blog.title;
+        document.getElementById("date").innerText = blog.date;
+
+        // Add an image if available, otherwise hide the image element
+        const blogImage = document.getElementById("blog-image");
+        if (blog.image) {
+          blogImage.src = blog.image;
+          blogImage.style.display = "block";
+        } else {
+          blogImage.style.display = "none";
+        }
+
+        document.getElementById("blog-content").innerHTML = blog.content;
+
+        // Set the page title dynamically
+        document.title = blog.title;
+      } else {
+        document.getElementById("blog-title").innerText = "Blog not found!";
+        document.getElementById("blog-content").innerText =
+          "Sorry, the blog you are looking for does not exist.";
+        document.getElementById("blog-image").style.display = "none";
+      }
+    </script>
+  </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
