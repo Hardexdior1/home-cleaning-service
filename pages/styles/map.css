@@ -1,0 +1,85 @@
+#map {
+  width: 100%; /* Adjust width for responsiveness */
+  max-width: 600px; /* Limit maximum width */
+  height: 200px; /* Reduced height */
+  margin: 0px;
+  border: 1px solid #ddd;
+}
+
+.button-button {
+  background-color: #be5434;
+  width: 600px;
+  height: 200px;
+  margin: 0;
+  padding: 0px 10px 0px 10px;
+}
+
+.button-button h4 {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  min-width: 100px;
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.map-container {
+  display: flex;
+  align-content: center;
+  align-items: flex-start;
+  gap: 0px;
+  margin: 30px;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .map-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0px;
+  }
+
+  .button-button {
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+  }
+  #map {
+    width: 94%;
+    max-width: 100%;
+    margin: 30px auto;
+  }
+  .button-button h4 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
