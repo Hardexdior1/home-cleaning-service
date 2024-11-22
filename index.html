@@ -24,7 +24,7 @@
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     />
     <!-- Link to Leaflet JS -->
-    <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   </head>
   <body>
     <!-- hero section here -->
@@ -247,7 +247,15 @@
       </div>
       <!-- MAP AREA -->
       <div class="map-container">
-        <div id="map"></div>
+        <div id="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.23233182992!2d-118.64281290000001!3d34.1915398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29dcbc5601b87%3A0x797717d2834f66f1!2sArchwood%20St%2C%20Los%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sng!4v1732290272922!5m2!1sen!2sng"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
 
         <div class="button-button">
           <h4>ZIP Codes in Archwood St, California</h4>
@@ -728,46 +736,45 @@
     <script src="./js/index.js"></script>
     <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
-  // Initialize the map and set the default view
-  var map = L.map("map").setView([34.200325, -118.598394], 13); // Default to Location 6100
+        // Initialize the map and set the default view
+        var map = L.map("map").setView([34.200325, -118.598394], 13); // Default to Location 6100
 
-  // Add OpenStreetMap tile layer
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  }).addTo(map);
+        // Add OpenStreetMap tile layer
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
 
-  // Define markers for the two locations
-  var location6100 = L.marker([34.200325, -118.598394]).bindPopup(
-    "6100 Archwood St, West Hills, 91307"
-  );
-  var location91307 = L.marker([34.201325, -118.598394]).bindPopup(
-    "Nearby ZIP Code 91307 (West Hills)"
-  );
+        // Define markers for the two locations
+        var location6100 = L.marker([34.200325, -118.598394]).bindPopup(
+          "6100 Archwood St, West Hills, 91307"
+        );
+        var location91307 = L.marker([34.201325, -118.598394]).bindPopup(
+          "Nearby ZIP Code 91307 (West Hills)"
+        );
 
-  // Add the markers to the map
-  location6100.addTo(map);
-  location91307.addTo(map);
+        // Add the markers to the map
+        location6100.addTo(map);
+        location91307.addTo(map);
 
-  // Function to move to a specific location when a button is clicked
-  function moveToLocation(lat, lng, zoomLevel) {
-    map.setView([lat, lng], zoomLevel);
-  }
+        // Function to move to a specific location when a button is clicked
+        function moveToLocation(lat, lng, zoomLevel) {
+          map.setView([lat, lng], zoomLevel);
+        }
 
-  // Add event listeners to the buttons
-  document
-    .getElementById("location-6100")
-    .addEventListener("click", function () {
-      moveToLocation(34.200325, -118.598394, 13); // Zoom to location 6100
-    });
+        // Add event listeners to the buttons
+        document
+          .getElementById("location-6100")
+          .addEventListener("click", function () {
+            moveToLocation(34.200325, -118.598394, 13); // Zoom to location 6100
+          });
 
-  document
-    .getElementById("location-91307")
-    .addEventListener("click", function () {
-      moveToLocation(34.201325, -118.598394, 13); // Zoom to ZIP Code 91307
-    });
-});
-
-     </script> -->
+        document
+          .getElementById("location-91307")
+          .addEventListener("click", function () {
+            moveToLocation(34.201325, -118.598394, 13); // Zoom to ZIP Code 91307
+          });
+      });
+    </script> -->
   </body>
 </html>
