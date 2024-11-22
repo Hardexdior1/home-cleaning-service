@@ -443,7 +443,6 @@ const services = {
   },
 };
 
-
 // Get the service ID from the URL (e.g., ?service=pellet-stove-repair)
 const urlParams = new URLSearchParams(window.location.search);
 const serviceId = urlParams.get("service");
@@ -599,9 +598,6 @@ if (services[serviceId]) {
   }
 }
 
-
-
-
 //WARIS CODE
 
 // carousel
@@ -720,6 +716,3 @@ Array();
 //   .addEventListener("click", function () {
 //     moveToLocation(34.200325, -118.598394, 13); // Zoom to ZIP Code 91307
 //   });
-
-
-

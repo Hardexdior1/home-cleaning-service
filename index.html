@@ -8,7 +8,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
       integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer"
+    />
 
     <title>Mr Chimney USA</title>
     <link rel="shortcut icon" href="images/fav.png" type="image/x-icon" />
@@ -20,7 +21,8 @@
     <!-- Link to Leaflet CSS -->
     <link
       rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <!-- Link to Leaflet JS -->
     <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script> -->
   </head>
@@ -169,11 +171,38 @@
         <div class="hero-right">
           <div>
             <h3>Request a quote and we'll send you our best price.</h3>
-            <form class="contact-form" action="https://formspree.io/f/mzbnqygg" method="post">
-              <input type="text" name="username" id="username" placeholder="Your Name" required />
-              <input type="email" name="email" id="email" placeholder="E-mail" required />
-              <input type="tel" name="number" id="number" placeholder="Phone Number" required />
-              <textarea placeholder="Message" name="message" id="message" rows="4"></textarea>
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/mzbnqygg"
+              method="post"
+            >
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                required
+              />
+              <input
+                type="tel"
+                name="number"
+                id="number"
+                placeholder="Phone Number"
+                required
+              />
+              <textarea
+                placeholder="Message"
+                name="message"
+                id="message"
+                rows="4"
+              ></textarea>
               <button type="submit">Submit</button>
             </form>
           </div>
@@ -221,7 +250,7 @@
         <div id="map"></div>
 
         <div class="button-button">
-          <h4>ZIP Codes in Lemon Grove, California</h4>
+          <h4>ZIP Codes in Archwood St, California</h4>
           <div class="button-container">
             <button id="location-6100" class="btn">6100</button>
             <button id="location-91307" class="btn">91307</button>
@@ -528,7 +557,8 @@
                 <img
                   src="/images/team_members.png"
                   alt="John Doe"
-                  class="testimonial-image" />
+                  class="testimonial-image"
+                />
                 <span class="testimonial-name">John Doe</span>
               </div>
             </div>
@@ -542,7 +572,8 @@
                 <img
                   src="/images/team_members.png"
                   alt="Jane Smith"
-                  class="testimonial-image" />
+                  class="testimonial-image"
+                />
                 <span class="testimonial-name">Jane Smith</span>
               </div>
             </div>
@@ -556,7 +587,8 @@
                 <img
                   src="/images/team_members.png"
                   alt="Emily Brown"
-                  class="testimonial-image" />
+                  class="testimonial-image"
+                />
                 <span class="testimonial-name">Emily Brown</span>
               </div>
             </div>
@@ -575,11 +607,38 @@
       <!-- Form Container -->
       <div class="form-container">
         <h2>Request A Call Back</h2>
-        <form class="call-back-form" action="https://formspree.io/f/mzbnqygg" method="post">
-          <input type="text" name="username" id="username" placeholder="Your Name" required />
-          <input type="email" name="email" id="email" placeholder="E-mail" required />
-          <input type="tel" name="number" id="number" placeholder="Phone Number" required />
-          <textarea placeholder="Message" name="message" id="message" rows="4"></textarea>
+        <form
+          class="call-back-form"
+          action="https://formspree.io/f/mzbnqygg"
+          method="post"
+        >
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+            required
+          />
+          <input
+            type="tel"
+            name="number"
+            id="number"
+            placeholder="Phone Number"
+            required
+          />
+          <textarea
+            placeholder="Message"
+            name="message"
+            id="message"
+            rows="4"
+          ></textarea>
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -667,7 +726,7 @@
     </div>
 
     <script src="./js/index.js"></script>
-     <!-- <script>
+    <!-- <script>
       document.addEventListener("DOMContentLoaded", function () {
   // Initialize the map and set the default view
   var map = L.map("map").setView([34.200325, -118.598394], 13); // Default to Location 6100
