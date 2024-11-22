@@ -634,51 +634,9 @@ nextButton.addEventListener("click", () => {
 
 // Initialize the carousel
 updateCarousel();
-const serve = document.querySelector(".service-buttons-containerss");
-const serviceHide = document.querySelector(".serviceHide");
-function HideNaveBar() {
-  if (serve.classList.contains("hide")) {
-    serve.classList.remove("hide");
-  } else {
-    serve.classList.add("hide");
-  }
-}
 
-serviceHide.addEventListener("click", HideNaveBar);
 
-const hamburger = document.querySelector(".hamburger");
-const list = document.querySelector(".list");
 
-function SibeBar() {
-  if (list.classList.contains("hides")) {
-    list.classList.remove("hides");
-  } else {
-    list.classList.add("hides");
-  }
-}
-
-hamburger.addEventListener("click", SibeBar);
-
-const accordion = document.querySelectorAll(".question");
-const hidden = document.querySelectorAll(".answer");
-
-function Array() {
-  accordion.forEach((item, indexs) => {
-    item.addEventListener("click", () => {
-      if (item) {
-        hidden.forEach((item, index) => {
-          if (index === indexs && item.classList.contains("hidden")) {
-            item.classList.remove("hidden");
-          } else {
-            item.classList.add("hidden");
-          }
-        });
-      }
-    });
-  });
-}
-
-Array();
 
 // // Initialize the map and set the default view (centered on Location 6100)
 // var map = L.map("map").setView([34.200325, -118.598394], 13); // Default to Location 6100
@@ -716,3 +674,5 @@ Array();
 //   .addEventListener("click", function () {
 //     moveToLocation(34.200325, -118.598394, 13); // Zoom to ZIP Code 91307
 //   });
+
+console.log("hello")
