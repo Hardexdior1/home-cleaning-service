@@ -3,9 +3,11 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
-        /* max-width: 1020px; */
+  /* max-width: 1020px; */
 }
-
+p {
+  font-weight: 400;
+}
 .hero-section {
   display: flex;
   align-items: center;
@@ -212,11 +214,7 @@ p {
   font-size: 30px;
 }
 /* .l */
-.l{
+.l {
   text-decoration: none;
   color: black;
 }
-
-
-
-
