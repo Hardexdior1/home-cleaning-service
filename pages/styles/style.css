@@ -40,7 +40,7 @@ body {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
 }
 .hero-title {
-  color: #e67e22;
+  color: #be5434;
   font-size: 2rem;
   margin: 0 0 10px;
 }
@@ -76,7 +76,7 @@ body {
 
 .features-list li::before {
   content: "»";
-  color: #e67e22;
+  color: #be5434;
   margin-right: 10px;
 }
 
@@ -103,7 +103,7 @@ body {
 
 .contact-form button,
 .btn {
-  background-color: #e67e22;
+  background-color: #be5434;
   color: #fff;
   padding: 10px;
   border: none;
@@ -114,7 +114,7 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #d35400;
+  background-color: #be5434;
 }
 
 /* Responsive Design */
@@ -154,7 +154,7 @@ body {
 
 /* button stylin */
 .service-button {
-  background-color: #d35400;
+  background-color: #be5434;
   color: white;
   padding: 10px 20px;
   border: none;
