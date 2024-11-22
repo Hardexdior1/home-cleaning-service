@@ -128,3 +128,16 @@ hr {
     flex-wrap: wrap;
   }
 }
+
+/* contact css */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Adds space between items */
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row; /* Horizontal layout on larger screens */
+  }
+}
