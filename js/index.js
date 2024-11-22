@@ -723,8 +723,3 @@ Array();
 
 
 
-console.log("hello abeggggg")
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Hello from JavaScript!");
-  // Add your navbar toggle code here
-});
