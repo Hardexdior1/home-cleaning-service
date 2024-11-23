@@ -149,9 +149,11 @@ p {
   background-color: #f4f4f9;
   padding: 5% 10%;
   border: 1px solid grey;
+  text-align: center;
 }
 .dynamicWrap h1 {
   font-size: 25px;
+  text-align: center;
 }
 
 /* button stylin */
@@ -198,6 +200,7 @@ p {
 
 #hero {
   padding-top: 50px;
+  text-align: center;
 }
 
 /* trusttrust-container-under */
@@ -205,12 +208,7 @@ p {
   margin-bottom: 50px;
 }
 
-#service-title {
-  text-align: left;
-  font-size: 30px;
-}
 #service-titles {
-  text-align: left;
   font-size: 30px;
 }
 /* .l */
