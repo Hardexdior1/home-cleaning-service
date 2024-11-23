@@ -330,7 +330,9 @@
   justify-content: center;
   margin-bottom: 60px;
 }
-
+.list a{
+  color: black;
+}
 @media (max-width: 768px) {
   .hides {
     display: none;
