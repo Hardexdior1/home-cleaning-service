@@ -40,7 +40,7 @@ body {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
 }
 .hero-title {
-  color: #be5434;
+  color: #2a65a1;
   font-size: 2rem;
   margin: 0 0 10px;
 }
@@ -74,11 +74,7 @@ body {
   }
 }
 
-.features-list li::before {
-  content: "»";
-  color: #be5434;
-  margin-right: 10px;
-}
+
 
 /*  */
 
@@ -103,7 +99,7 @@ body {
 
 .contact-form button,
 .btn {
-  background-color: #be5434;
+  background-color: #2a65a1;
   color: #fff;
   padding: 10px;
   border: none;
@@ -114,7 +110,8 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #be5434;
+  background-color: whitesmoke;
+  color: black;
 }
 
 /* Responsive Design */
@@ -137,7 +134,7 @@ body {
 
 /* global padding */
 .padding {
-  padding: 5% 10%;
+  padding: 5% 5% 0% 5%;
 }
 .padding h1 {
   margin-bottom: 40px;
@@ -154,7 +151,7 @@ body {
 
 /* button stylin */
 .service-button {
-  background-color: #be5434;
+  background-color: #2a65a1;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -172,8 +169,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px; /* Adds space between buttons */
-  margin-top: 40px;
-  margin-bottom: 60px;
+ 
 }
 @media (max-width: 800px) {
   .service-buttons-container {
@@ -197,7 +193,9 @@ p {
 #hero {
   padding-top: 50px;
 }
-
+.hero-right h3{
+  color: #2a65a1;
+}
 /* trusttrust-container-under */
 .trust-container h2 {
   margin-bottom: 50px;
@@ -217,6 +215,314 @@ p {
   color: black;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 
 
+/* counter css */
+.counter-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 40px 20px; /* Added padding for the wrapper */
+  background-color:  #2a65a1; /* White general background */
+   /* Black text for general contrast */
+}
+
+.counter {
+  text-align: center;
+  background-color: #fff; /* Blue card background */
+  color: #2a65a1; /* White text inside cards */
+  padding: 10px 15px; /* Adjusted padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  flex: 1 1 calc(25% - 15px); /* Responsive sizing */
+  max-width: 250px;
+  min-width: 180px;
+}
+
+.counter p {
+  color: #2a65a1;
+}
+
+.counter-value {
+  font-size: 2rem; /* Slightly reduced font size */
+  font-weight: bold;
+  
+}
+
+.counter-title {
+  font-size: 1rem; /* Adjusted title font size */
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Adjust for tablets and larger phones */
+@media (max-width: 768px) {
+  .counter {
+    flex: 1 1 calc(50% - 15px); /* Half-width on tablets */
+  }
+}
+
+/* Full-width cards on mobile view */
+@media (max-width: 480px) {
+  .counter {
+    flex: 1 1 100%; /* Full width */
+    max-width: 100%; /* Ensure it spans the full width */
+  }
+}
+/* dynamic service and map area styling */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Main Wrapper */
+.dynamicWrap {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Title and Subtitle */
+.trust-container h2 {
+  font-size: 2rem;
+  color: #2a65a1;
+  margin-bottom: 10px;
+}
+
+.trust-container .under {
+  width: 50px;
+  height: 4px;
+  background-color: #2a65a1;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+#hero {
+  margin-bottom: 40px;
+}
+
+#service-title, #service-title2 {
+  font-size: 1.8rem;
+  color: #2a65a1;
+  margin-bottom: 15px;
+}
+
+#main-content, #main-content2 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.service-buttons-container{
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-container .btn {
+  padding: 10px 20px;
+  background-color: #2a65a1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.button-container .btn:hover {
+  background-color: #1a3e73;
+}
+
+/* Services Section */
+#serv {
+  margin: 10px ;
+  text-align: center;
+}
+
+#serv h1 {
+  font-size: 2rem;
+  color: #2a65a1;
+  margin-bottom: 20px;
+}
+
+.service-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-button {
+  background-color: #2a65a1;
+  color: #fff;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.service-button:hover {
+  background-color: #1a3e73;
+  transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+ 
+  
+  #service-title, #service-title2 {
+    font-size: 1.5rem;
+  }
+  
+  #main-content, #main-content2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dynamicWrap {
+    padding: 15px;
+  }
+
+  .button-container .btn {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+
+  .service-buttons-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* why choose us section */
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Section Styles */
+.why-choose-us {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/* Cards Layout */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #2a65a1; /* Default border color */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  color: #000; /* Default text color */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.card-description {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+  background-color: #2a65a1; /* Background becomes blue on hover */
+  color: #fff; /* Text color turns white on hover */
+  border-color: #2a65a1; /* Keep the blue border on hover */
+}
+
+.card:hover .card-title {
+  color: #fff; /* Title turns white on hover */
+}
+
+.card:hover .card-description {
+  color: #fff; /* Description turns white on hover */
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+#serv{
+
+}
+
+
+/* Map Section */
+/* Overall container styling */
+
+
+
+
+
+
+
+/* map end */
+
+/* don't touch */
+#padding1{
+  padding: 10%;
+}

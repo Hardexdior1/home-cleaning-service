@@ -805,7 +805,7 @@ const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 
 // Total number of items
-const totalItems = document.querySelectorAll(".carousel-item").length;
+const totalItems = document.querySelectorAll(".carousel-item1").length;
 
 let currentIndex = 0;
 

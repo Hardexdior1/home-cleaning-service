@@ -7,7 +7,7 @@
 }
 
 .contact-info {
-  background-color: #34495e;
+  background-color: black;
   color: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -18,7 +18,7 @@
 .contact-info h1 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #be5434;
+  color: #2a65a1;
 }
 
 .contact-info p {
@@ -27,8 +27,9 @@
 }
 
 .contact-info a {
-  color: #be5434;
+  color: #2a65a1;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .contact-info a:hover {
@@ -79,7 +80,7 @@
   padding: 14px;
   font-size: 16px;
   font-weight: bold;
-  background-color: #be5434;
+  background-color: #2a65a1;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -87,8 +88,12 @@
   transition: background-color 0.3s;
 }
 
+#bt{
+  border: 1px solid white;
+  color: white;
+}
 .form-container button:hover {
-  background-color: #be5434;
+  background-color: #7e7a79;
 }
 
 /* Responsive */
@@ -106,12 +111,12 @@
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #34495e;
+  color: #2a65a1;
 }
 
 hr {
   border: none;
-  border-top: 2px solid #34495e;
+  border-top: 2px solid #2a65a1;
   width: 50px;
   margin: 10px 0;
 }

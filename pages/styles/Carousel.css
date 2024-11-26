@@ -15,7 +15,7 @@
 }
 
 /* Carousel */
-.carousel-wrapper {
+.carousel-wrapper1 {
   position: relative;
   width: 100%;
   max-width: 500px;
@@ -31,7 +31,7 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {
+.carousel-item1 {
   min-width: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -76,7 +76,7 @@
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
-  background-color: #be5434;
+  background-color: #2a65a1;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -84,7 +84,7 @@
 }
 
 .carousel-button:hover {
-  background-color: #be5434;
+  background-color: #000;
 }
 
 /* Responsive styling */

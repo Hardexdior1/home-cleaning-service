@@ -13,17 +13,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+
 
     <style>
       body {
         font-family: Arial, sans-serif;
         margin: 0 auto;
-        padding: 20px;
         max-width: 1370px;
+        background-color: #f9f9f9; /* Subtle background color */
+      }
+      a:hover{
+        color: white;
       }
 
       .bl {
-        color: #e67e22;
+        color: #2a65a1;
+        font-size: 2rem;
+        margin-bottom: 20px;
       }
 
       #blog-list {
@@ -44,6 +54,7 @@
         width: 100%; /* Full width for smaller screens */
         box-shadow: 0px 3px 5px rgba(27, 27, 27, 0.2);
         transition: box-shadow 0.3s ease;
+        max-width: 600px; /* Restricts card width */
       }
 
       .blog-card:hover {
@@ -60,21 +71,23 @@
       .blog-content {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        justify-content: space-between;
       }
 
       .blog-title {
         font-size: 18px;
         font-weight: bold;
-        color: #555;
+        color: #333; /* Slightly darker for better contrast */
       }
 
       .blog-excerpt {
-        color: #555;
+        font-size: 14px;
+        color: #666; /* Subtle text color for the date */
+        margin-top: 5px;
       }
 
       .btn {
-        background: #e67e22;
+        background: #2a65a1;
         color: white;
         border: none;
         padding: 10px 15px;
@@ -82,10 +95,12 @@
         border-radius: 5px;
         font-size: 14px;
         transition: background 0.3s;
+        align-self: flex-start;
+        margin-top: 10px;
       }
 
       .btn:hover {
-        background: #cf620d;
+        background: #a59a92;
       }
 
       @media (max-width: 768px) {
@@ -98,206 +113,93 @@
           width: 100%; /* Adjust image size for smaller screens */
           height: auto;
         }
+
+        .btn {
+          align-self: center; /* Center button on smaller screens */
+        }
       }
     </style>
   </head>
   <body>
-    <!-- navbar -->
-    <div class="navbar">
-      <div class="icon">
-        <i class="fas fa-map-marker-alt"></i>
 
-        <a href="/" class="l">
-          <div><h4>Mr Chimney USA</h4></div></a
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/"><h4>Mr Chimney USA</h4></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              id="servicesDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a href="/?service=pellet-stove-repair" class="dropdown-item">Pellet Stove Repair Service</a>
+              <a href="/?service=chimney-cap-installation" class="dropdown-item">Chimney Cap Installation</a>
+              <a href="/?service=chimney-fireplace-repair" class="dropdown-item">Chimney Fireplace Repair</a>
+              <a href="/?service=chimney-flashing-repair" class="dropdown-item">Chimney Flashing Repair</a>
+              <a href="/?service=chimney-inspection" class="dropdown-item">Chimney Inspection</a>
+              <a href="/?service=chimney-liner" class="dropdown-item">Chimney Liner</a>
+              <a href="/?service=chimney-masonry-repair" class="dropdown-item">Chimney Masonry Repair</a>
+              <a href="/?service=chimney-rebuilds" class="dropdown-item">Chimney Rebuilds</a>
+              <a href="/?service=chimney-repair" class="dropdown-item">Chimney Repair</a>
+              <a href="/?service=commercial-air-duct-cleaning" class="dropdown-item">Commercial Air Duct Cleaning</a>
+              <a href="/?service=dryer-duct-cleaning" class="dropdown-item">Dryer Duct Cleaning</a>
+              <a href="/?service=duct-cleaning" class="dropdown-item">Duct Cleaning</a>
+              <a href="/?service=firebox-repair" class="dropdown-item">Firebox Repair</a>
+              <a href="/?service=fireplace-cleaning" class="dropdown-item">Fireplace Cleaning</a>
+              <a href="/?service=gas-fireplace-cleaning" class="dropdown-item">Gas Fireplace Cleaning</a>
+              <a href="/?service=gas-fireplace-repair" class="dropdown-item">Gas Fireplace Repair</a>
+              <a href="/?service=local-chimney-sweep-and-cleaning" class="dropdown-item">Local Chimney Sweep And Cleaning</a>
+              <a href="/?service=pellet-stove-repair" class="dropdown-item">Pellet Stove Repair</a>
+            </div>
+            
+          </li>
+          <li class="nav-item">
+            <a href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- Book Button -->
+        <a href="/">
+          <button class="btn btn-outline-primary btn-book" type="button" id="bt">
+            Book
+          </button></a
         >
       </div>
-
-      <div class="list hides">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li class="serviceHide">
-            <a href="#"
-              >Service <i class="fa fa-angle-down" aria-hidden="true"></i
-            ></a>
-          </li>
-          <li><a href="./contact.html">Contact us </a></li>
-          <li><a href="#">Blog</a></li>
-        </ul>
-        <!-- <div class="callss">
-          <div class="phone0-icons">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-          </div>
-          <div class="phone-contents">
-            <span>Click to Call:</span>
-            <span class="sepes"
-              ><a href="tel: +1424-444-4424">+1424-444-4424</a></span
-            >
-          </div>
-        </div> -->
-      </div>
-      <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
-      <div class="call">
-        <div class="phone0-icon">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-        </div>
-        <div class="phone-content">
-          <span>Click to Call:</span>
-          <span class="sepe"
-            ><a href="tel: +1424-444-4424">+1424-444-4424</a></span
-          >
-        </div>
-      </div>
-      <!-- 
-      <div class="services hide"></div> -->
-      <section class="service-buttons-containerss hide">
-        <a href="../index.html?service=pellet-stove-repair">
-          <button class="service-buttons">Pellet Stove Repair Service</button>
-        </a>
-
-        <a href="../index.html?service=chimney-cap-installation">
-          <button class="service-buttons">Chimney Cap Installation</button>
-        </a>
-
-        <a href="../index.html?service=chimney-fireplace-repair">
-          <button class="service-buttons">Chimney Fireplace Repair</button>
-        </a>
-
-        <a href="../index.html?service=chimney-flashing-repair">
-          <button class="service-buttons">Chimney Flashing Repair</button>
-        </a>
-
-        <a href="../index.html?service=chimney-inspection">
-          <button class="service-buttons">Chimney Inspection</button>
-        </a>
-
-        <a href="../index.html?service=chimney-liner">
-          <button class="service-buttons">Chimney Liner</button>
-        </a>
-
-        <a href="../index.html?service=chimney-masonry-repair">
-          <button class="service-buttons">Chimney Masonry Repair</button>
-        </a>
-
-        <a href="../index.html?service=chimney-rebuilds">
-          <button class="service-buttons">Chimney Rebuilds</button>
-        </a>
-
-        <a href="../index.html?service=chimney-repair">
-          <button class="service-buttons">Chimney Repair</button>
-        </a>
-
-        <a href="../index.html?service=commercial-air-duct-cleaning">
-          <button class="service-buttons">Commercial Air Duct Cleaning</button>
-        </a>
-
-        <a href="../index.html?service=dryer-duct-cleaning">
-          <button class="service-buttons">Dryer Duct Cleaning</button>
-        </a>
-
-        <a href="../index.html?service=duct-cleaning">
-          <button class="service-buttons">Duct Cleaning</button>
-        </a>
-
-        <a href="../index.html?service=firebox-repair">
-          <button class="service-buttons">Firebox Repair</button>
-        </a>
-
-        <a href="../index.html?service=fireplace-cleaning">
-          <button class="service-buttons">Fireplace Cleaning</button>
-        </a>
-
-        <a href="../index.html?service=gas-fireplace-cleaning">
-          <button class="service-buttons">Gas Fireplace Cleaning</button>
-        </a>
-
-        <a href="../index.html?service=gas-fireplace-repair">
-          <button class="service-buttons">Gas Fireplace Repair</button>
-        </a>
-
-        <a href="../index.html?service=local-chimney-sweep-and-cleaning">
-          <button class="service-buttons">
-            Local Chimney Sweep And Cleaning
-          </button>
-        </a>
-
-        <a href="../index.html?service=pellet-stove-repair">
-          <button class="service-buttons">Pellet Stove Repair</button>
-        </a>
-      </section>
-    </div>
-
-    <!-- normal blog page -->
+    </nav>
     <div class="padding">
-      <center class="bl"><h1>Blog</h1></center>
+      <center class="bl">
+        <h1>Blog</h1>
+      </center>
       <div id="blog-list">
         <!-- Blog cards will be dynamically added here -->
       </div>
     </div>
+  
 
-    <!-- footer section -->
-    <div class="footer">
-      <div class="footer-one">
-        <div class="company-name">
-          <a href="/">Lemon Grove Chimney Sweep</a>
-        </div>
-        <div class="para"><p>Five Star Company</p></div>
-        <div class="stars">
-          <img src="/images/star-set.webp" alt="star-image" />
-        </div>
-        <div class="p-element">
-          <p>
-            Looking for the best chimney sweep services in Lemon Grove? Look no
-            further! Our network of local chimney sweep experts is ready to
-            solve any chimney-related issue you might face. Trust us to connect
-            you with Lemon Grove's finest, highly qualified professionals,
-            ensuring your chimney care is in the best hands.
-          </p>
-        </div>
-      </div>
 
-      <div class="footer-two">
-        <div class="footer-two-head">
-          <h3>We Accept All Major credit Cards!</h3>
-        </div>
-        <div class="footer-two-image">
-          <img src="/images/bank-cards.webp" alt="card-image" />
-        </div>
-
-        <div class="follow"><h3>Follow us</h3></div>
-        <div class="social-media">
-          <img src="/images/insta.webp" alt="instagram" />
-          <img src="/images/twitter.webp" alt="twitter" />
-          <img src="/images/face.webp" alt="face-book" />
-        </div>
-      </div>
-      <div class="footer-three">
-        <div class="quick">
-          <h3>Quick Links</h3>
-          <div class="a-links">
-            <ul>
-              <li><a href="/"> Home</a></li>
-              <li><a href="">Contact Us</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="">Sitemap</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="service">
-          <h3>Services</h3>
-          <div class="a-links">
-            <ul>
-              <li><a href=""> Chimney Repair</a></li>
-              <li><a href="">Fireplace Cleaning</a></li>
-              <li><a href="">Gas Fireplace Cleaning</a></li>
-              <li><a href="">Chimney Fireplace Repair</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- javascript -->
     <script src="../js/index.js"></script>
     <script>
       // Simulated blog data
@@ -417,7 +319,9 @@
         blogList.appendChild(blogCard);
       });
     </script>
-        <script src="../js/nav.js"></script>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
