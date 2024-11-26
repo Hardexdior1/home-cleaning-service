@@ -5,7 +5,9 @@
   margin: 0px;
   border: 1px solid #ddd;
 }
-
+p {
+  font-weight: 400;
+}
 #map iframe {
   width: 700px;
   height: 200px;

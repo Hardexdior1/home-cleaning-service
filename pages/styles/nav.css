@@ -14,7 +14,6 @@
 
 
 
-
 /* don't touch it */
 .l {
   text-decoration: none;
@@ -51,4 +50,95 @@
 }
 .navbar h4 {
   font-weight: 700;
+}
+@media (max-width:992px) {
+  .navbar a{
+    /* padding-top: 25px;
+    color: red;
+    padding-bottom: 25px; */
+    
+  }
+}
+
+
+
+/* footer section */
+content {
+  min-height: 80vh; /* Ensures footer sticks to the bottom on short pages */
+}
+
+.footer {
+  background-color: #2a65a1;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+  margin: 80px 0px 0px 0px;
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+.footer-section p {
+  color: #fff;
+}
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #fff;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.footer-bottom p {
+  color: white;
+}
+.social-icons .icon {
+  background-color: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+#t{
+  margin-top: 5px;
+margin-bottom: 5px;
+}
+
+.social-icons .icon:hover {
+  background-color: #fff;
+  color: #2a65a1;
 }

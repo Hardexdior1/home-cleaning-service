@@ -5,7 +5,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
+p {
+  font-weight: 400;
+}
 .contact-info {
   background-color: black;
   color: #fff;
