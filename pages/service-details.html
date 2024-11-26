@@ -1,175 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-<h1>hello world </h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="page-title">service-details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+  </head>
+  <style>
+    .details-wrap {
+      padding: 5% 10% 5% 10%;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/"><h4>Mr Chimney USA</h4></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="dropdown-toggle"
+              href="#"
+              id="servicesDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <a href="/?service=pellet-stove-repair" class="dropdown-item"
+                >Pellet Stove Repair Service</a
+              >
+              <a href="/?service=chimney-cap-installation" class="dropdown-item"
+                >Chimney Cap Installation</a
+              >
+              <a href="/?service=chimney-fireplace-repair" class="dropdown-item"
+                >Chimney Fireplace Repair</a
+              >
+              <a href="/?service=chimney-flashing-repair" class="dropdown-item"
+                >Chimney Flashing Repair</a
+              >
+              <a href="/?service=chimney-inspection" class="dropdown-item"
+                >Chimney Inspection</a
+              >
+              <a href="/?service=chimney-liner" class="dropdown-item"
+                >Chimney Liner</a
+              >
+              <a href="/?service=chimney-masonry-repair" class="dropdown-item"
+                >Chimney Masonry Repair</a
+              >
+              <a href="/?service=chimney-rebuilds" class="dropdown-item"
+                >Chimney Rebuilds</a
+              >
+              <a href="/?service=chimney-repair" class="dropdown-item"
+                >Chimney Repair</a
+              >
+              <a
+                href="/?service=commercial-air-duct-cleaning"
+                class="dropdown-item"
+                >Commercial Air Duct Cleaning</a
+              >
+              <a href="/?service=dryer-duct-cleaning" class="dropdown-item"
+                >Dryer Duct Cleaning</a
+              >
+              <a href="/?service=duct-cleaning" class="dropdown-item"
+                >Duct Cleaning</a
+              >
+              <a href="/?service=firebox-repair" class="dropdown-item"
+                >Firebox Repair</a
+              >
+              <a href="/?service=fireplace-cleaning" class="dropdown-item"
+                >Fireplace Cleaning</a
+              >
+              <a href="/?service=gas-fireplace-cleaning" class="dropdown-item"
+                >Gas Fireplace Cleaning</a
+              >
+              <a href="/?service=gas-fireplace-repair" class="dropdown-item"
+                >Gas Fireplace Repair</a
+              >
+              <a
+                href="/?service=local-chimney-sweep-and-cleaning"
+                class="dropdown-item"
+                >Local Chimney Sweep And Cleaning</a
+              >
+              <a href="/?service=pellet-stove-repair" class="dropdown-item"
+                >Pellet Stove Repair</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="./blogs.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+        <!-- Book Button -->
+        <a href="/">
+          <button
+            class="btn btn-outline-primary btn-book"
+            type="button"
+            id="bt">
+            Book
+          </button></a
+        >
+      </div>
+    </nav>
+
+    <section class="details-wrap">
+      <center><h1 class="detail"></h1></center>
+
+      <div class="flex-container">
+        <!-- Form Container -->
+        <div class="form-container">
+          <h2>Request A Call Back</h2>
+          <form
+            class="call-back-form"
+            action="https://formspree.io/f/mzbnqygg"
+            method="post">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Your Name"
+              required />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              required />
+            <input
+              type="tel"
+              name="number"
+              id="number"
+              placeholder="Phone Number"
+              required />
+            <input type="text" id="service-name" name="service-name" />
+
+            <textarea
+              placeholder="Message"
+              name="message"
+              id="message"
+              rows="4"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        <!-- Information Container -->
+        <div class="info-container">
+          <div id="details-container"></div>
+
+          <hr />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>
+            Providing top-notch cleaning services tailored to your needs. From
+            homes to offices, we ensure every corner sparkles, leaving a fresh
+            and inviting space for you to enjoy.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+            <li><a href="./pages/blogs.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul>
+            <li><a href="#" class="icon">Facebook</a></li>
+            <li><a href="#" class="icon" id="t">Twitter</a></li>
+            <li><a href="#" class="icon">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 YourCompany. All Rights Reserved.</p>
+      </div>
+    </footer>
 
     <script>
-        
-const servicesArray = [
-  {
-    id: "chimney-animal-removal",
-    title: "Chimney Animal Removal Service",
-    subtitle: "Remove Animals Safely from Your Chimney",
-    description: `
+      const servicesArray = [
+        {
+          id: "chimney-animal-removal",
+          title: "Chimney Animal Removal Service",
+          subtitle: "Remove Animals Safely from Your Chimney",
+          description: `
       <p>Our professional team provides safe and humane removal of animals from your chimney to prevent damage and ensure safety.</p>
     `,
-    description2: `
+          description2: `
       <p>Keep your chimney free from unwanted visitors with our expert animal removal services.</p>
     `,
-  },
-  {
-    id: "chimney-cap-installation",
-    title: "Chimney Cap Installation Service",
-    subtitle: "Protect Your Chimney with a Cap in Lemon Grove",
-    description: `
+        },
+        {
+          id: "chimney-cap-installation",
+          title: "Chimney Cap Installation Service",
+          subtitle: "Protect Your Chimney with a Cap in Lemon Grove",
+          description: `
       <p>We offer chimney cap installation to prevent debris and animals from entering your chimney while improving its performance.</p>
     `,
-    description2: `
+          description2: `
       <p>A chimney cap provides essential protection against rain, debris, and animals. Regular inspection and timely installation keep your chimney in peak condition.</p>
     `,
-  },
-  {
-    id: "chimney-fireplace-repair",
-    title: "Chimney Fireplace Repair Service",
-    subtitle: "Keep Your Fireplace Safe with Expert Repairs",
-    description: `
+        },
+        {
+          id: "chimney-fireplace-repair",
+          title: "Chimney Fireplace Repair Service",
+          subtitle: "Keep Your Fireplace Safe with Expert Repairs",
+          description: `
       <p>Our fireplace repair services ensure your chimney is safe and functional, from repairing fireboxes to fixing damaged masonry.</p>
     `,
-    description2: `
+          description2: `
       <p>Annual inspections and repairs help avoid hazards and maintain the charm of your fireplace.</p>
     `,
-  },
-  {
-    id: "chimney-flashing-repair",
-    title: "Chimney Flashing Repair Service",
-    subtitle: "Avoid Water Damage with Flashing Repairs",
-    description: `
+        },
+        {
+          id: "chimney-flashing-repair",
+          title: "Chimney Flashing Repair Service",
+          subtitle: "Avoid Water Damage with Flashing Repairs",
+          description: `
       <p>We repair chimney flashing to prevent leaks and water damage that can lead to expensive repairs down the line.</p>
     `,
-    description2: `
+          description2: `
       <p>Protect your home from costly water intrusion by ensuring the flashing around your chimney is in top condition.</p>
     `,
-  },
-  {
-    id: "chimney-inspection",
-    title: "Chimney Inspection Service",
-    subtitle: "Annual Inspections Keep Your Chimney Safe",
-    description: `
+        },
+        {
+          id: "chimney-inspection",
+          title: "Chimney Inspection Service",
+          subtitle: "Annual Inspections Keep Your Chimney Safe",
+          description: `
       <p>Regular chimney inspections are vital for your safety. Our technicians thoroughly inspect your chimney for any potential issues.</p>
     `,
-    description2: `
+          description2: `
       <p>Schedule an inspection today to avoid costly repairs and ensure your chimney operates safely year-round.</p>
     `,
-  },
-  {
-    id: "chimney-liner",
-    title: "Chimney Liner Installation Service",
-    subtitle: "Improve Chimney Efficiency with a Liner",
-    description: `
+        },
+        {
+          id: "chimney-liner",
+          title: "Chimney Liner Installation Service",
+          subtitle: "Improve Chimney Efficiency with a Liner",
+          description: `
       <p>We offer chimney liner installation to improve the efficiency and safety of your fireplace or stove.</p>
     `,
-    description2: `
+          description2: `
       <p>A properly installed liner enhances draft efficiency and protects your home from heat transfer.</p>
     `,
-  },
-  {
-    id: "chimney-masonry-repair",
-    title: "Chimney Masonry Repair Service",
-    subtitle: "Restore the Strength of Your Chimney",
-    description: `
+        },
+        {
+          id: "chimney-masonry-repair",
+          title: "Chimney Masonry Repair Service",
+          subtitle: "Restore the Strength of Your Chimney",
+          description: `
       <p>We repair and restore the masonry around your chimney, ensuring it remains structurally sound and safe to use.</p>
     `,
-    description2: `
+          description2: `
       <p>Deteriorated bricks or mortar can lead to safety concerns. Ensure your chimney's longevity with expert masonry repairs.</p>
     `,
-  },
-  {
-    id: "chimney-rebuilds",
-    title: "Chimney Rebuild Service",
-    subtitle: "Chimney Rebuilds Ensure Safety and Longevity",
-    description: `
+        },
+        {
+          id: "chimney-rebuilds",
+          title: "Chimney Rebuild Service",
+          subtitle: "Chimney Rebuilds Ensure Safety and Longevity",
+          description: `
       <p>Our chimney rebuild service is designed to restore your chimney to its original condition, whether it’s damaged or outdated.</p>
     `,
-    description2: `
+          description2: `
       <p>A full chimney rebuild offers a fresh start for safety and style, ensuring lasting durability.</p>
     `,
-  },
-  {
-    id: "chimney-repair",
-    title: "Chimney Repair Service",
-    subtitle: "Chimneys Require Routine Maintenance in Lemon Grove",
-    description: `
+        },
+        {
+          id: "chimney-repair",
+          title: "Chimney Repair Service",
+          subtitle: "Chimneys Require Routine Maintenance in Lemon Grove",
+          description: `
       <p>Our team specializes in repairing chimneys to ensure they are safe and functional.
       From masonry repairs to liner replacements, we've got you covered.</p>
     `,
-    description2: `
+          description2: `
       <p>Even minor cracks or damage can escalate quickly. Routine maintenance ensures your chimney remains in excellent condition.</p>
     `,
-  },
-  {
-    id: "commercial-air-duct-cleaning",
-    title: "Commercial Air Duct Cleaning Service",
-    subtitle: "Cleaner Air for Your Commercial Space",
-    description: `
+        },
+        {
+          id: "commercial-air-duct-cleaning",
+          title: "Commercial Air Duct Cleaning Service",
+          subtitle: "Cleaner Air for Your Commercial Space",
+          description: `
       <p>We provide thorough air duct cleaning services to improve indoor air quality and the efficiency of your HVAC system.</p>
     `,
-    description2: `
+          description2: `
       <p>Improve air quality and reduce allergens in your business environment with our specialized duct cleaning services.</p>
     `,
-  },
-  {
-    id: "dryer-duct-cleaning",
-    title: "Dryer Duct Cleaning Service",
-    subtitle: "Prevent Hazards with Dryer Duct Cleaning",
-    description: `
+        },
+        {
+          id: "dryer-duct-cleaning",
+          title: "Dryer Duct Cleaning Service",
+          subtitle: "Prevent Hazards with Dryer Duct Cleaning",
+          description: `
       <p>Clogged dryer ducts can lead to safety hazards. Our technicians can clean your dryer vents to ensure efficient and safe operation.</p>
     `,
-    description2: `
+          description2: `
       <p>Regular cleaning prevents fire risks and ensures your dryer operates at peak efficiency.</p>
     `,
-  },
-  {
-    id: "duct-cleaning",
-    title: "Duct Cleaning Service",
-    subtitle: "Cleaner Ducts Mean Better Air Quality",
-    description: `
+        },
+        {
+          id: "duct-cleaning",
+          title: "Duct Cleaning Service",
+          subtitle: "Cleaner Ducts Mean Better Air Quality",
+          description: `
       <p>We offer comprehensive duct cleaning to remove dust, allergens, and other contaminants from your HVAC system.</p>
     `,
-    description2: `
+          description2: `
       <p>Enjoy fresher, healthier air with a thorough cleaning of your HVAC system ducts.</p>
     `,
-  },
-  {
-    id: "firebox-repair",
-    title: "Firebox Repair Service",
-    subtitle: "Maintain a Safe Firebox with Expert Repairs",
-    description: `
+        },
+        {
+          id: "firebox-repair",
+          title: "Firebox Repair Service",
+          subtitle: "Maintain a Safe Firebox with Expert Repairs",
+          description: `
       <p>Our firebox repair services ensure that your firebox is safe and in good working order, so you can enjoy your fireplace without worry.</p>
     `,
-    description2: `
+          description2: `
       <p>Cracks and damage compromise your firebox's safety. Let us restore its integrity and reliability.</p>
     `,
-  },
-  {
-    id: "fireplace-cleaning",
-    title: "Fireplace Cleaning Service",
-    subtitle: "Safe and Efficient Fireplace Cleaning",
-    description: `
+        },
+        {
+          id: "fireplace-cleaning",
+          title: "Fireplace Cleaning Service",
+          subtitle: "Safe and Efficient Fireplace Cleaning",
+          description: `
       <p>We provide professional fireplace cleaning to remove soot, creosote, and debris, keeping your fireplace safe and functional.</p>
     `,
-    description2: `
+          description2: `
       <p>Maintain a clean and safe fireplace to enjoy warm and worry-free evenings.</p>
     `,
-  },
-  // Add remaining services following this format
-];
+        },
+        // Add remaining services following this format
+      ];
 
+      // Function to get query parameter value by name
+      function getQueryParam(param) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(param);
+      }
+
+      // Extract the 'id' parameter from the URL
+      const itemId = getQueryParam("id");
+
+      // Find the corresponding object from the array
+      const item = servicesArray.find((i) => i.id === itemId);
+
+      // Render the data on the page
+      const detailsContainer = document.getElementById("details-container");
+      const detail = document.querySelector(".detail");
+      const serviceNameInput = document.getElementById("service-name");
+
+      if (item) {
+        detailsContainer.innerHTML = `
+        <h2>${item.title}</h2>
+        <p>${item.description}</p>
+      `;
+        detail.textContent = `${item.title}`;
+        serviceNameInput.value = item.title;
+      } else {
+        detailsContainer.innerHTML = `
+    <h2>We offer ${itemId}</h2>
+    <p>Our team specializes in providing high-quality services like ${itemId} to meet your needs.</p>
+  `;
+        serviceNameInput.value = itemId;
+        detail.textContent = itemId;
+      }
     </script>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>

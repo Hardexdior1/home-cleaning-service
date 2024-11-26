@@ -52,11 +52,9 @@
   font-weight: 700;
 }
 @media (max-width:992px) {
-  .navbar a{
-    /* padding-top: 25px;
-    color: red;
-    padding-bottom: 25px; */
-    
+  .nav-item a {
+    display: block; 
+    padding: 10px 0; 
   }
 }
 

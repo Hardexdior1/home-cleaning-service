@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  max-width: 1500px; 
+  max-width: 1800px; 
   margin: 0 auto;
 }
 
@@ -11,7 +11,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../images/hero.webp"); /* Replace with your background */
+  background-image: url("../../images/hero.webp"); 
   background-size: cover;
   background-position: center;
   padding: 30px 0px;
@@ -21,21 +21,17 @@ p {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   max-width: 1200px;
-  /* background-color: rgba(255, 255, 255, 0.9); */
   border-radius: 8px;
-  /* padding: 10px 0px; */
   gap: 20px;
 }
 
 .hero-left {
-  /* flex: 1 1 50%; */
-  /* background-color: transparent; */
+ 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 2%;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
 }
 .hero-right {
-  /* flex: 1 1 40%; */
   padding: 2%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), transparent);
@@ -125,12 +121,7 @@ p {
     display: flex;
     padding: 0px 4%;
   }
-  /* padding: 10px 0px; */
-
-  /* .hero-left,
-    .hero-right {
-      flex: 1 1 100%;
-    } */
+  
 }
 
 /* global padding */
@@ -227,19 +218,18 @@ html{
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 40px 20px; /* Added padding for the wrapper */
-  background-color:  #2a65a1; /* White general background */
-   /* Black text for general contrast */
+  padding: 40px 20px; 
+  background-color:  #2a65a1; 
 }
 
 .counter {
   text-align: center;
-  background-color: #fff; /* Blue card background */
-  color: #2a65a1; /* White text inside cards */
-  padding: 10px 15px; /* Adjusted padding */
+  background-color: #fff; 
+  color: #2a65a1; 
+  padding: 10px 15px; 
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  flex: 1 1 calc(25% - 15px); /* Responsive sizing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  flex: 1 1 calc(25% - 15px); 
   max-width: 250px;
   min-width: 180px;
 }
@@ -249,13 +239,13 @@ html{
 }
 
 .counter-value {
-  font-size: 2rem; /* Slightly reduced font size */
+  font-size: 2rem; 
   font-weight: bold;
   
 }
 
 .counter-title {
-  font-size: 1rem; /* Adjusted title font size */
+  font-size: 1rem; 
   margin-top: 8px;
   font-weight: 500;
 }
@@ -270,56 +260,18 @@ html{
 /* Full-width cards on mobile view */
 @media (max-width: 480px) {
   .counter {
-    flex: 1 1 100%; /* Full width */
-    max-width: 100%; /* Ensure it spans the full width */
+    flex: 1 1 100%; 
+    max-width: 100%; 
   }
 }
-/* dynamic service and map area styling */
-/* General Styles */
 
 
-/* Main Wrapper */
-.dynamicWrap {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
 
-/* Title and Subtitle */
-.trust-container h2 {
-  font-size: 2rem;
-  color: #2a65a1;
-  margin-bottom: 10px;
-}
 
-.trust-container .under {
-  width: 50px;
-  height: 4px;
-  background-color: #2a65a1;
-  margin: 0 auto;
-  border-radius: 2px;
-}
 
-#hero {
-  margin-bottom: 40px;
-}
 
-#service-title, #service-title2 {
-  font-size: 1.8rem;
-  color: #2a65a1;
-  margin-bottom: 15px;
-}
 
-#main-content, #main-content2 {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-  text-align: justify;
-}
 
-.service-buttons-container{
-
-}
 
 .button-container {
   display: flex;
@@ -378,9 +330,14 @@ html{
 }
 
 /* Responsive Adjustments */
+.real{
+  font-size: 2.5rem;
+}
 @media (max-width: 768px) {
  
-  
+  .real{
+    font-size: 2rem;
+  }
   #service-title, #service-title2 {
     font-size: 1.5rem;
   }
@@ -493,13 +450,7 @@ html{
     grid-template-columns: repeat(4, 1fr);
   }
 }
-#serv{
 
-}
-
-
-/* Map Section */
-/* Overall container styling */
 
 
 
