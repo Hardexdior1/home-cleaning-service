@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>hello world </h1>
+
+    <script>
+        
+const servicesArray = [
+  {
+    id: "chimney-animal-removal",
+    title: "Chimney Animal Removal Service",
+    subtitle: "Remove Animals Safely from Your Chimney",
+    description: `
+      <p>Our professional team provides safe and humane removal of animals from your chimney to prevent damage and ensure safety.</p>
+    `,
+    description2: `
+      <p>Keep your chimney free from unwanted visitors with our expert animal removal services.</p>
+    `,
+  },
+  {
+    id: "chimney-cap-installation",
+    title: "Chimney Cap Installation Service",
+    subtitle: "Protect Your Chimney with a Cap in Lemon Grove",
+    description: `
+      <p>We offer chimney cap installation to prevent debris and animals from entering your chimney while improving its performance.</p>
+    `,
+    description2: `
+      <p>A chimney cap provides essential protection against rain, debris, and animals. Regular inspection and timely installation keep your chimney in peak condition.</p>
+    `,
+  },
+  {
+    id: "chimney-fireplace-repair",
+    title: "Chimney Fireplace Repair Service",
+    subtitle: "Keep Your Fireplace Safe with Expert Repairs",
+    description: `
+      <p>Our fireplace repair services ensure your chimney is safe and functional, from repairing fireboxes to fixing damaged masonry.</p>
+    `,
+    description2: `
+      <p>Annual inspections and repairs help avoid hazards and maintain the charm of your fireplace.</p>
+    `,
+  },
+  {
+    id: "chimney-flashing-repair",
+    title: "Chimney Flashing Repair Service",
+    subtitle: "Avoid Water Damage with Flashing Repairs",
+    description: `
+      <p>We repair chimney flashing to prevent leaks and water damage that can lead to expensive repairs down the line.</p>
+    `,
+    description2: `
+      <p>Protect your home from costly water intrusion by ensuring the flashing around your chimney is in top condition.</p>
+    `,
+  },
+  {
+    id: "chimney-inspection",
+    title: "Chimney Inspection Service",
+    subtitle: "Annual Inspections Keep Your Chimney Safe",
+    description: `
+      <p>Regular chimney inspections are vital for your safety. Our technicians thoroughly inspect your chimney for any potential issues.</p>
+    `,
+    description2: `
+      <p>Schedule an inspection today to avoid costly repairs and ensure your chimney operates safely year-round.</p>
+    `,
+  },
+  {
+    id: "chimney-liner",
+    title: "Chimney Liner Installation Service",
+    subtitle: "Improve Chimney Efficiency with a Liner",
+    description: `
+      <p>We offer chimney liner installation to improve the efficiency and safety of your fireplace or stove.</p>
+    `,
+    description2: `
+      <p>A properly installed liner enhances draft efficiency and protects your home from heat transfer.</p>
+    `,
+  },
+  {
+    id: "chimney-masonry-repair",
+    title: "Chimney Masonry Repair Service",
+    subtitle: "Restore the Strength of Your Chimney",
+    description: `
+      <p>We repair and restore the masonry around your chimney, ensuring it remains structurally sound and safe to use.</p>
+    `,
+    description2: `
+      <p>Deteriorated bricks or mortar can lead to safety concerns. Ensure your chimney's longevity with expert masonry repairs.</p>
+    `,
+  },
+  {
+    id: "chimney-rebuilds",
+    title: "Chimney Rebuild Service",
+    subtitle: "Chimney Rebuilds Ensure Safety and Longevity",
+    description: `
+      <p>Our chimney rebuild service is designed to restore your chimney to its original condition, whether it’s damaged or outdated.</p>
+    `,
+    description2: `
+      <p>A full chimney rebuild offers a fresh start for safety and style, ensuring lasting durability.</p>
+    `,
+  },
+  {
+    id: "chimney-repair",
+    title: "Chimney Repair Service",
+    subtitle: "Chimneys Require Routine Maintenance in Lemon Grove",
+    description: `
+      <p>Our team specializes in repairing chimneys to ensure they are safe and functional.
+      From masonry repairs to liner replacements, we've got you covered.</p>
+    `,
+    description2: `
+      <p>Even minor cracks or damage can escalate quickly. Routine maintenance ensures your chimney remains in excellent condition.</p>
+    `,
+  },
+  {
+    id: "commercial-air-duct-cleaning",
+    title: "Commercial Air Duct Cleaning Service",
+    subtitle: "Cleaner Air for Your Commercial Space",
+    description: `
+      <p>We provide thorough air duct cleaning services to improve indoor air quality and the efficiency of your HVAC system.</p>
+    `,
+    description2: `
+      <p>Improve air quality and reduce allergens in your business environment with our specialized duct cleaning services.</p>
+    `,
+  },
+  {
+    id: "dryer-duct-cleaning",
+    title: "Dryer Duct Cleaning Service",
+    subtitle: "Prevent Hazards with Dryer Duct Cleaning",
+    description: `
+      <p>Clogged dryer ducts can lead to safety hazards. Our technicians can clean your dryer vents to ensure efficient and safe operation.</p>
+    `,
+    description2: `
+      <p>Regular cleaning prevents fire risks and ensures your dryer operates at peak efficiency.</p>
+    `,
+  },
+  {
+    id: "duct-cleaning",
+    title: "Duct Cleaning Service",
+    subtitle: "Cleaner Ducts Mean Better Air Quality",
+    description: `
+      <p>We offer comprehensive duct cleaning to remove dust, allergens, and other contaminants from your HVAC system.</p>
+    `,
+    description2: `
+      <p>Enjoy fresher, healthier air with a thorough cleaning of your HVAC system ducts.</p>
+    `,
+  },
+  {
+    id: "firebox-repair",
+    title: "Firebox Repair Service",
+    subtitle: "Maintain a Safe Firebox with Expert Repairs",
+    description: `
+      <p>Our firebox repair services ensure that your firebox is safe and in good working order, so you can enjoy your fireplace without worry.</p>
+    `,
+    description2: `
+      <p>Cracks and damage compromise your firebox's safety. Let us restore its integrity and reliability.</p>
+    `,
+  },
+  {
+    id: "fireplace-cleaning",
+    title: "Fireplace Cleaning Service",
+    subtitle: "Safe and Efficient Fireplace Cleaning",
+    description: `
+      <p>We provide professional fireplace cleaning to remove soot, creosote, and debris, keeping your fireplace safe and functional.</p>
+    `,
+    description2: `
+      <p>Maintain a clean and safe fireplace to enjoy warm and worry-free evenings.</p>
+    `,
+  },
+  // Add remaining services following this format
+];
+
+    </script>
+</body>
+</html>
