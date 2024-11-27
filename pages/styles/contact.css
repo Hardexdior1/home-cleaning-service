@@ -90,7 +90,7 @@ p {
   transition: background-color 0.3s;
 }
 
-#bt{
+#bt {
   border: 1px solid white;
   color: white;
 }
@@ -98,6 +98,24 @@ p {
   background-color: #7e7a79;
 }
 
+.contact-us-section-image {
+  /* color: #2a65a1; */
+  font-size: 2rem;
+  margin-bottom: 60px;
+  background-image: url("/images/cont.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 300px;
+}
+.contact-us-section-image h2 {
+  padding-top: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+}
 /* Responsive */
 @media (max-width: 480px) {
   .form-container {
