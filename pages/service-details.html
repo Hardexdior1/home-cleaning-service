@@ -6,13 +6,33 @@
     <title class="page-title">service-details</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/nav.css" />
     <link rel="stylesheet" href="./styles/contact.css" />
   </head>
   <style>
     .details-wrap {
       padding: 5% 10% 5% 10%;
+    }
+    .details-wrap-image {
+      /* color: #2a65a1; */
+      font-size: 2rem;
+      margin-bottom: 60px;
+      background-image: url("/images/serv.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 300px;
+    }
+    .details-wrap-image h2 {
+      padding-top: 100px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+      font-size: 35px;
     }
   </style>
   <body>
@@ -25,7 +45,8 @@
         data-target="#navbarContent"
         aria-controls="navbarContent"
         aria-expanded="false"
-        aria-label="Toggle navigation">
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -42,7 +63,8 @@
               role="button"
               data-toggle="dropdown"
               aria-haspopup="true"
-              aria-expanded="false">
+              aria-expanded="false"
+            >
               Services
             </a>
             <div class="dropdown-menu" aria-labelledby="servicesDropdown">
@@ -118,7 +140,8 @@
           <button
             class="btn btn-outline-primary btn-book"
             type="button"
-            id="bt">
+            id="bt"
+          >
             Book
           </button></a
         >
@@ -126,6 +149,9 @@
     </nav>
 
     <section class="details-wrap">
+      <div class="details-wrap-image">
+        <h2>SERVICE</h2>
+      </div>
       <center><h1 class="detail"></h1></center>
 
       <div class="flex-container">
@@ -135,32 +161,37 @@
           <form
             class="call-back-form"
             action="https://formspree.io/f/mzbnqygg"
-            method="post">
+            method="post"
+          >
             <input
               type="text"
               name="username"
               id="username"
               placeholder="Your Name"
-              required />
+              required
+            />
             <input
               type="email"
               name="email"
               id="email"
               placeholder="E-mail"
-              required />
+              required
+            />
             <input
               type="tel"
               name="number"
               id="number"
               placeholder="Phone Number"
-              required />
+              required
+            />
             <input type="text" id="service-name" name="service-name" />
 
             <textarea
               placeholder="Message"
               name="message"
               id="message"
-              rows="4"></textarea>
+              rows="4"
+            ></textarea>
             <button type="submit">Submit</button>
           </form>
         </div>
