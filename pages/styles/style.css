@@ -2,6 +2,9 @@
 body {
   max-width: 1800px;
   margin: 0 auto;
+  z-index: 999;
+  opacity: 0.1;
+  pointer-events: none;
 }
 
 p {
@@ -442,4 +445,16 @@ html {
 
 #back {
   background: linear-gradient(to bottom, #34495e, #2a65a1);
+}
+
+.all11 {
+  display: none;
+}
+.pay {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
